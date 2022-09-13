@@ -47,8 +47,29 @@
                     <view key="view" contentMode="scaleToFill" id="Y44-zx-eJS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FlowerGarden_logo" translatesAutoresizingMaskIntoConstraints="NO" id="2h0-mf-JEq">
+                                <rect key="frame" x="151" y="44" width="112" height="62"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="112" id="jvJ-O0-mm9"/>
+                                    <constraint firstAttribute="height" constant="62" id="t88-jt-4W7"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OOO 님 환영합니다!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bb4-Sd-mKy">
+                                <rect key="frame" x="136.5" y="121" width="141" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="MA7-WP-nmb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bb4-Sd-mKy" firstAttribute="top" secondItem="2h0-mf-JEq" secondAttribute="bottom" constant="15" id="Srv-6H-LAQ"/>
+                            <constraint firstItem="bb4-Sd-mKy" firstAttribute="centerX" secondItem="Y44-zx-eJS" secondAttribute="centerX" id="Y3n-kN-HmA"/>
+                            <constraint firstItem="2h0-mf-JEq" firstAttribute="top" secondItem="MA7-WP-nmb" secondAttribute="top" id="nRq-Sq-K4T"/>
+                            <constraint firstItem="2h0-mf-JEq" firstAttribute="centerX" secondItem="Y44-zx-eJS" secondAttribute="centerX" id="w2u-S9-akp"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" selectedImage="house.fill" id="JTi-g5-9pw"/>
                 </viewController>
@@ -94,6 +115,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="FlowerGarden_logo" width="232" height="122"/>
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="house" catalog="system" width="128" height="106"/>
