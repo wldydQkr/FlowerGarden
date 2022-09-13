@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C0B8AE6E28D0B38400C256D8 /* HomeBannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B8AE6D28D0B38400C256D8 /* HomeBannerCollectionViewCell.swift */; };
 		C0EDD93D28D0A9B4004086FD /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EDD93C28D0A9B4004086FD /* MapViewController.swift */; };
 		C0EDD93F28D0A9CF004086FD /* LikeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EDD93E28D0A9CF004086FD /* LikeViewController.swift */; };
 		C0EDD94128D0A9E2004086FD /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EDD94028D0A9E2004086FD /* UserViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C0B8AE6D28D0B38400C256D8 /* HomeBannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBannerCollectionViewCell.swift; sourceTree = "<group>"; };
 		C0EDD93C28D0A9B4004086FD /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		C0EDD93E28D0A9CF004086FD /* LikeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeViewController.swift; sourceTree = "<group>"; };
 		C0EDD94028D0A9E2004086FD /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C0B8AE6F28D0B38900C256D8 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C0B8AE6D28D0B38400C256D8 /* HomeBannerCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		C0EDD94228D0A9EF004086FD /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
@@ -50,6 +60,7 @@
 				C0EDD93C28D0A9B4004086FD /* MapViewController.swift */,
 				C0EDD93E28D0A9CF004086FD /* LikeViewController.swift */,
 				C0EDD94028D0A9E2004086FD /* UserViewController.swift */,
+				C0B8AE6F28D0B38900C256D8 /* Cells */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -160,6 +171,7 @@
 				C0F6A7BB28D0680200DAAACB /* AppDelegate.swift in Sources */,
 				C0F6A7BD28D0680200DAAACB /* SceneDelegate.swift in Sources */,
 				C0EDD93D28D0A9B4004086FD /* MapViewController.swift in Sources */,
+				C0B8AE6E28D0B38400C256D8 /* HomeBannerCollectionViewCell.swift in Sources */,
 				C0EDD93F28D0A9CF004086FD /* LikeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
