@@ -11,7 +11,6 @@ import SnapKit
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var bannerCollectionView: UICollectionView!
-    
     @IBOutlet weak var tableView: UITableView!
     
     var nowPage: Int = 0
@@ -108,11 +107,11 @@ extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "StoreListTableViewCell", for: indexPath) as? StoreListTableViewCell
-        cell?.selectionStyle = .none
-        cell?.isSelected = false
-        
-        
+
         return cell ?? UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     }
     
     
