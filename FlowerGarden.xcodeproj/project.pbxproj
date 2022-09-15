@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C0AD121528D2EE99003A87C5 /* StoreListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AD121428D2EE99003A87C5 /* StoreListTableViewCell.swift */; };
+		C0B2959B28D22ABA00633C21 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C0B2959A28D22ABA00633C21 /* SnapKit */; };
 		C0B8AE6E28D0B38400C256D8 /* HomeBannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B8AE6D28D0B38400C256D8 /* HomeBannerCollectionViewCell.swift */; };
 		C0EDD93D28D0A9B4004086FD /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EDD93C28D0A9B4004086FD /* MapViewController.swift */; };
 		C0EDD93F28D0A9CF004086FD /* LikeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EDD93E28D0A9CF004086FD /* LikeViewController.swift */; };
@@ -20,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C0AD121428D2EE99003A87C5 /* StoreListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreListTableViewCell.swift; sourceTree = "<group>"; };
 		C0B8AE6D28D0B38400C256D8 /* HomeBannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBannerCollectionViewCell.swift; sourceTree = "<group>"; };
 		C0EDD93C28D0A9B4004086FD /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		C0EDD93E28D0A9CF004086FD /* LikeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeViewController.swift; sourceTree = "<group>"; };
@@ -39,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0B2959B28D22ABA00633C21 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,6 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				C0B8AE6D28D0B38400C256D8 /* HomeBannerCollectionViewCell.swift */,
+				C0AD121428D2EE99003A87C5 /* StoreListTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -111,6 +116,9 @@
 			dependencies = (
 			);
 			name = FlowerGarden;
+			packageProductDependencies = (
+				C0B2959A28D22ABA00633C21 /* SnapKit */,
+			);
 			productName = FlowerGarden;
 			productReference = C0F6A7B728D0680200DAAACB /* FlowerGarden.app */;
 			productType = "com.apple.product-type.application";
@@ -139,6 +147,9 @@
 				Base,
 			);
 			mainGroup = C0F6A7AE28D0680100DAAACB;
+			packageReferences = (
+				C0B2959928D22ABA00633C21 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = C0F6A7B828D0680200DAAACB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -169,6 +180,7 @@
 				C0F6A7BF28D0680200DAAACB /* HomeViewController.swift in Sources */,
 				C0EDD94128D0A9E2004086FD /* UserViewController.swift in Sources */,
 				C0F6A7BB28D0680200DAAACB /* AppDelegate.swift in Sources */,
+				C0AD121528D2EE99003A87C5 /* StoreListTableViewCell.swift in Sources */,
 				C0F6A7BD28D0680200DAAACB /* SceneDelegate.swift in Sources */,
 				C0EDD93D28D0A9B4004086FD /* MapViewController.swift in Sources */,
 				C0B8AE6E28D0B38400C256D8 /* HomeBannerCollectionViewCell.swift in Sources */,
@@ -390,6 +402,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C0B2959928D22ABA00633C21 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C0B2959A28D22ABA00633C21 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C0B2959928D22ABA00633C21 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C0F6A7AF28D0680100DAAACB /* Project object */;
 }

@@ -6,29 +6,32 @@
 //
 
 import UIKit
+import SnapKit
 
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var bannerCollectionView: UICollectionView!
     
+    @IBOutlet weak var tableView: UITableView!
+    
     var nowPage: Int = 0
     
     let dataArray: Array<UIImage> = [UIImage(named: "Banner_0")!, UIImage(named: "Banner_1")!, UIImage(named: "Banner_2")!]
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
-        setupLayouts()
+        setupLayout()
         bannerTimer()
         
     }
 
 }
 
+//MARK: setupLayout
 extension HomeViewController {
-    func setupLayouts() {
+    func setupLayout() {
+        
         
         bannerCollectionView.layer.cornerRadius = 8.0
         bannerCollectionView.clipsToBounds = true
@@ -36,9 +39,16 @@ extension HomeViewController {
         bannerCollectionView.delegate = self
         bannerCollectionView.dataSource = self
         
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        tableView.rowHeight = 90.0
+        
+        
     }
 }
 
+//MARK: CollectionView
 extension HomeViewController: UICollectionViewDelegate {
     
 }
@@ -82,5 +92,28 @@ extension HomeViewController: UICollectionViewDataSource {
         nowPage += 1
         bannerCollectionView.scrollToItem(at: NSIndexPath(item: nowPage, section: 0) as IndexPath, at: .right, animated: true)
     }
+    
+}
+
+//MARK: TableView
+extension HomeViewController: UITableViewDelegate {
+    
+}
+
+extension HomeViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "StoreListTableViewCell", for: indexPath) as? StoreListTableViewCell
+        cell?.selectionStyle = .none
+        cell?.isSelected = false
+        
+        
+        return cell ?? UITableViewCell()
+    }
+    
     
 }

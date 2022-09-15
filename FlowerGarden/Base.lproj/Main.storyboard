@@ -112,20 +112,98 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jG2-d1-Yyg">
+                                                <rect key="frame" x="0.0" y="404" width="393" height="389"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <prototypes>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoreListTableViewCell" rowHeight="98" id="8f3-ku-eIg" customClass="StoreListTableViewCell" customModule="FlowerGarden" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="50" width="393" height="98"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8f3-ku-eIg" id="JwA-Rc-btq">
+                                                            <rect key="frame" x="0.0" y="0.0" width="393" height="98"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaf.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wKb-Xk-5To">
+                                                                    <rect key="frame" x="12" y="11" width="70" height="68.666666666666671"/>
+                                                                    <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                                                    <color key="tintColor" systemColor="systemGreenColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="70" id="CXn-Oa-7nF"/>
+                                                                        <constraint firstAttribute="width" constant="70" id="cLa-XM-VSz"/>
+                                                                    </constraints>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                            <integer key="value" value="7"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="지용이의 꽃집 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zcR-vj-Lrg">
+                                                                    <rect key="frame" x="102" y="11.999999999999998" width="96.333333333333314" height="20.333333333333329"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="좋아요 ❤️" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8N-Wg-XUN">
+                                                                    <rect key="frame" x="309.66666666666669" y="11.999999999999998" width="71.333333333333314" height="20.333333333333329"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99개" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQ5-2e-Dro">
+                                                                    <rect key="frame" x="330.66666666666669" y="63" width="29.666666666666686" height="17"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="서울특별시 동대문구 장안1동" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fjf-dn-03I">
+                                                                    <rect key="frame" x="102" y="64" width="148" height="16"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="zcR-vj-Lrg" firstAttribute="leading" secondItem="wKb-Xk-5To" secondAttribute="trailing" constant="20" id="13A-Me-Qf5"/>
+                                                                <constraint firstItem="Fjf-dn-03I" firstAttribute="leading" secondItem="wKb-Xk-5To" secondAttribute="trailing" constant="20" id="3ZY-rj-GTd"/>
+                                                                <constraint firstItem="wKb-Xk-5To" firstAttribute="top" secondItem="JwA-Rc-btq" secondAttribute="top" constant="10" id="3eL-OJ-2uK"/>
+                                                                <constraint firstItem="Z8N-Wg-XUN" firstAttribute="bottom" secondItem="zcR-vj-Lrg" secondAttribute="bottom" id="Ey4-AK-4Pv"/>
+                                                                <constraint firstItem="MQ5-2e-Dro" firstAttribute="centerX" secondItem="Z8N-Wg-XUN" secondAttribute="centerX" id="JPe-n7-15z"/>
+                                                                <constraint firstItem="MQ5-2e-Dro" firstAttribute="bottom" secondItem="Fjf-dn-03I" secondAttribute="bottom" id="RvF-i5-3TK"/>
+                                                                <constraint firstAttribute="trailing" secondItem="Z8N-Wg-XUN" secondAttribute="trailing" constant="12" id="Wsh-9I-vER"/>
+                                                                <constraint firstItem="wKb-Xk-5To" firstAttribute="leading" secondItem="JwA-Rc-btq" secondAttribute="leading" constant="12" id="XrG-lL-njI"/>
+                                                                <constraint firstItem="zcR-vj-Lrg" firstAttribute="top" secondItem="JwA-Rc-btq" secondAttribute="top" constant="12" id="cNT-82-Na7"/>
+                                                                <constraint firstItem="Fjf-dn-03I" firstAttribute="bottom" secondItem="wKb-Xk-5To" secondAttribute="bottom" id="n8D-bq-QsS"/>
+                                                            </constraints>
+                                                        </tableViewCellContentView>
+                                                        <connections>
+                                                            <outlet property="addressLabel" destination="Fjf-dn-03I" id="V9T-UQ-rBX"/>
+                                                            <outlet property="likeCountLabel" destination="MQ5-2e-Dro" id="zcr-XC-9Bp"/>
+                                                            <outlet property="likeLabel" destination="Z8N-Wg-XUN" id="t1g-Vx-fW7"/>
+                                                            <outlet property="storeImageView" destination="wKb-Xk-5To" id="v11-8w-18G"/>
+                                                            <outlet property="titleLabel" destination="zcR-vj-Lrg" id="j7m-W4-KYU"/>
+                                                        </connections>
+                                                    </tableViewCell>
+                                                </prototypes>
+                                            </tableView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="jG2-d1-Yyg" secondAttribute="trailing" id="3w7-GH-lan"/>
                                             <constraint firstItem="evR-a5-HhT" firstAttribute="top" secondItem="Qxn-mx-oa6" secondAttribute="bottom" id="F1K-2F-Mgh"/>
+                                            <constraint firstAttribute="bottom" secondItem="jG2-d1-Yyg" secondAttribute="bottom" id="FzF-EQ-zXg"/>
                                             <constraint firstItem="EkO-fc-CBF" firstAttribute="leading" secondItem="6fH-k3-vei" secondAttribute="leading" constant="12" id="HZR-bK-2Cb"/>
                                             <constraint firstAttribute="trailing" secondItem="Q6s-2O-CWh" secondAttribute="trailing" constant="12" id="Jjk-ld-Kpu"/>
                                             <constraint firstItem="EkO-fc-CBF" firstAttribute="top" secondItem="Q6s-2O-CWh" secondAttribute="bottom" constant="10" id="MqH-3J-u4J"/>
                                             <constraint firstAttribute="trailing" secondItem="EkO-fc-CBF" secondAttribute="trailing" constant="12" id="SZb-Jy-AZk"/>
                                             <constraint firstItem="Qxn-mx-oa6" firstAttribute="top" secondItem="6fH-k3-vei" secondAttribute="top" id="Sy0-ma-JcR"/>
                                             <constraint firstItem="Q6s-2O-CWh" firstAttribute="top" secondItem="evR-a5-HhT" secondAttribute="bottom" constant="10" id="Z4b-6e-vUC"/>
+                                            <constraint firstItem="jG2-d1-Yyg" firstAttribute="top" secondItem="EkO-fc-CBF" secondAttribute="bottom" id="bq7-2l-D0c"/>
                                             <constraint firstItem="evR-a5-HhT" firstAttribute="leading" secondItem="6fH-k3-vei" secondAttribute="leading" constant="12" id="gCh-ei-Vwy"/>
                                             <constraint firstItem="Q6s-2O-CWh" firstAttribute="leading" secondItem="6fH-k3-vei" secondAttribute="leading" constant="12" id="gWb-FG-Ke4"/>
                                             <constraint firstItem="Qxn-mx-oa6" firstAttribute="centerX" secondItem="6fH-k3-vei" secondAttribute="centerX" id="jMJ-1c-e5b"/>
                                             <constraint firstAttribute="trailing" secondItem="evR-a5-HhT" secondAttribute="trailing" constant="12" id="vGg-O1-OtA"/>
+                                            <constraint firstItem="jG2-d1-Yyg" firstAttribute="leading" secondItem="6fH-k3-vei" secondAttribute="leading" id="yrz-Mc-Hx2"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -153,11 +231,12 @@
                     <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" selectedImage="house.fill" id="JTi-g5-9pw"/>
                     <connections>
                         <outlet property="bannerCollectionView" destination="Q6s-2O-CWh" id="4lT-WB-fip"/>
+                        <outlet property="tableView" destination="jG2-d1-Yyg" id="rUf-FA-lrI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tgm-Xg-pPk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="860.86956521739137" y="-274.55357142857139"/>
+            <point key="canvasLocation" x="860.30534351145036" y="-274.64788732394368"/>
         </scene>
         <!--Like-->
         <scene sceneID="aM6-Qf-SOY">
@@ -203,12 +282,19 @@
         <image name="heart.fill" catalog="system" width="128" height="107"/>
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="leaf.circle.fill" catalog="system" width="128" height="123"/>
         <image name="map" catalog="system" width="128" height="112"/>
         <image name="map.fill" catalog="system" width="128" height="110"/>
         <image name="person" catalog="system" width="128" height="121"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
