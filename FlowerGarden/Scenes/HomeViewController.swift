@@ -13,6 +13,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var bannerCollectionView: UICollectionView!
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet var scrollView: UIScrollView!
+    
     var nowPage: Int = 0
     
     let dataArray: Array<UIImage> = [UIImage(named: "Banner_0")!, UIImage(named: "Banner_1")!, UIImage(named: "Banner_2")!]
@@ -110,9 +112,4 @@ extension HomeViewController: UITableViewDataSource {
 
         return cell ?? UITableViewCell()
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    }
-    
-    
 }

@@ -11,6 +11,7 @@
 		C0AD121528D2EE99003A87C5 /* StoreListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AD121428D2EE99003A87C5 /* StoreListTableViewCell.swift */; };
 		C0B2959B28D22ABA00633C21 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C0B2959A28D22ABA00633C21 /* SnapKit */; };
 		C0B8AE6E28D0B38400C256D8 /* HomeBannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B8AE6D28D0B38400C256D8 /* HomeBannerCollectionViewCell.swift */; };
+		C0E7749628D3994C00FB9A5F /* HomeDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E7749528D3994C00FB9A5F /* HomeDetailTableViewCell.swift */; };
 		C0EDD93D28D0A9B4004086FD /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EDD93C28D0A9B4004086FD /* MapViewController.swift */; };
 		C0EDD93F28D0A9CF004086FD /* LikeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EDD93E28D0A9CF004086FD /* LikeViewController.swift */; };
 		C0EDD94128D0A9E2004086FD /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EDD94028D0A9E2004086FD /* UserViewController.swift */; };
@@ -26,6 +27,7 @@
 		C0745AE128D314F7009B9D7F /* HomeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailViewController.swift; sourceTree = "<group>"; };
 		C0AD121428D2EE99003A87C5 /* StoreListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreListTableViewCell.swift; sourceTree = "<group>"; };
 		C0B8AE6D28D0B38400C256D8 /* HomeBannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBannerCollectionViewCell.swift; sourceTree = "<group>"; };
+		C0E7749528D3994C00FB9A5F /* HomeDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailTableViewCell.swift; sourceTree = "<group>"; };
 		C0EDD93C28D0A9B4004086FD /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		C0EDD93E28D0A9CF004086FD /* LikeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeViewController.swift; sourceTree = "<group>"; };
 		C0EDD94028D0A9E2004086FD /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			children = (
 				C0B8AE6D28D0B38400C256D8 /* HomeBannerCollectionViewCell.swift */,
 				C0AD121428D2EE99003A87C5 /* StoreListTableViewCell.swift */,
+				C0E7749528D3994C00FB9A5F /* HomeDetailTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				C0F6A7BF28D0680200DAAACB /* HomeViewController.swift in Sources */,
 				C0EDD94128D0A9E2004086FD /* UserViewController.swift in Sources */,
 				C0F6A7BB28D0680200DAAACB /* AppDelegate.swift in Sources */,
+				C0E7749628D3994C00FB9A5F /* HomeDetailTableViewCell.swift in Sources */,
 				C0745AE228D314F7009B9D7F /* HomeDetailViewController.swift in Sources */,
 				C0AD121528D2EE99003A87C5 /* StoreListTableViewCell.swift in Sources */,
 				C0F6A7BD28D0680200DAAACB /* SceneDelegate.swift in Sources */,
