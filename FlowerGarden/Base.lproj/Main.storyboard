@@ -396,14 +396,103 @@
                     <view key="view" contentMode="scaleToFill" id="haZ-Ot-OgM">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="06q-ap-9N0">
+                                <rect key="frame" x="0.0" y="113" width="393" height="656"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mDg-JB-tVC">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LikeCollectionViewCell" id="OKu-b2-BcG" customClass="LikeCollectionViewCell" customModule="FlowerGarden" customModuleProvider="target">
+                                        <rect key="frame" x="0.66666666666666663" y="0.0" width="392" height="78"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="eJV-0I-feB">
+                                            <rect key="frame" x="0.0" y="0.0" width="392" height="78"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaf.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ka1-UR-LHy">
+                                                    <rect key="frame" x="12" y="1.6666666666666679" width="60" height="57.333333333333336"/>
+                                                    <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                                    <color key="tintColor" systemColor="systemIndigoColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="6Z7-9d-VVS"/>
+                                                        <constraint firstAttribute="width" constant="60" id="Vrb-US-D5A"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="7"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="지용이의 꽃집" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aef-yZ-oiL">
+                                                    <rect key="frame" x="82" y="0.0" width="298" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="좋아요 : 99개" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3c-df-mNH">
+                                                    <rect key="frame" x="82" y="21" width="298" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="서울특별시 동대문구 장안1동" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SIq-bJ-Yzn">
+                                                    <rect key="frame" x="82" y="43" width="298" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="O3c-df-mNH" firstAttribute="centerY" secondItem="ka1-UR-LHy" secondAttribute="centerY" id="2Rf-Gf-13h"/>
+                                                <constraint firstItem="aef-yZ-oiL" firstAttribute="leading" secondItem="ka1-UR-LHy" secondAttribute="trailing" constant="10" id="DNY-Fw-jJr"/>
+                                                <constraint firstItem="SIq-bJ-Yzn" firstAttribute="bottom" secondItem="ka1-UR-LHy" secondAttribute="bottom" id="FqF-dh-a37"/>
+                                                <constraint firstItem="O3c-df-mNH" firstAttribute="leading" secondItem="ka1-UR-LHy" secondAttribute="trailing" constant="10" id="Htz-xi-zLP"/>
+                                                <constraint firstItem="O3c-df-mNH" firstAttribute="leading" secondItem="aef-yZ-oiL" secondAttribute="leading" id="SER-ak-zP3"/>
+                                                <constraint firstAttribute="trailing" secondItem="O3c-df-mNH" secondAttribute="trailing" constant="12" id="qbx-m5-tpf"/>
+                                                <constraint firstItem="ka1-UR-LHy" firstAttribute="leading" secondItem="eJV-0I-feB" secondAttribute="leading" constant="12" id="ri7-wC-INO"/>
+                                                <constraint firstAttribute="trailing" secondItem="SIq-bJ-Yzn" secondAttribute="trailing" constant="12" id="rrn-vT-rG6"/>
+                                                <constraint firstItem="ka1-UR-LHy" firstAttribute="top" secondItem="eJV-0I-feB" secondAttribute="top" id="tFb-hO-yWy"/>
+                                                <constraint firstItem="aef-yZ-oiL" firstAttribute="top" secondItem="ka1-UR-LHy" secondAttribute="top" id="vuH-CN-syg"/>
+                                                <constraint firstItem="SIq-bJ-Yzn" firstAttribute="leading" secondItem="ka1-UR-LHy" secondAttribute="trailing" constant="10" id="wUm-y2-vEv"/>
+                                                <constraint firstAttribute="trailing" secondItem="aef-yZ-oiL" secondAttribute="trailing" constant="12" id="wtZ-Km-mi4"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="392" height="78"/>
+                                        <connections>
+                                            <outlet property="addressLabel" destination="SIq-bJ-Yzn" id="Afi-y0-pXM"/>
+                                            <outlet property="likeLabel" destination="O3c-df-mNH" id="cac-4M-Y3j"/>
+                                            <outlet property="titleImageView" destination="ka1-UR-LHy" id="6Vm-39-rGQ"/>
+                                            <outlet property="titleLabel" destination="aef-yZ-oiL" id="u3w-Sl-8mr"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="YIo-1N-0GN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="06q-ap-9N0" firstAttribute="top" secondItem="YIo-1N-0GN" secondAttribute="top" constant="10" id="DMU-fL-goL"/>
+                            <constraint firstItem="06q-ap-9N0" firstAttribute="trailing" secondItem="YIo-1N-0GN" secondAttribute="trailing" id="GvW-7R-dnT"/>
+                            <constraint firstItem="06q-ap-9N0" firstAttribute="leading" secondItem="YIo-1N-0GN" secondAttribute="leading" id="Jgv-4c-xCm"/>
+                            <constraint firstItem="06q-ap-9N0" firstAttribute="leading" secondItem="YIo-1N-0GN" secondAttribute="leading" id="gTG-OI-A0h"/>
+                            <constraint firstItem="YIo-1N-0GN" firstAttribute="trailing" secondItem="06q-ap-9N0" secondAttribute="trailing" id="jBI-LM-4AU"/>
+                            <constraint firstItem="YIo-1N-0GN" firstAttribute="bottom" secondItem="06q-ap-9N0" secondAttribute="bottom" id="vSC-SH-NjM"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Like" image="heart" catalog="system" selectedImage="heart.fill" id="Rdl-cF-DFE"/>
+                    <connections>
+                        <outlet property="collectionView" destination="06q-ap-9N0" id="Bu5-uL-Hnd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ANw-nO-pDX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="860" y="-946"/>
+            <point key="canvasLocation" x="858.77862595419845" y="-946.47887323943667"/>
         </scene>
         <!--지용이의 꽃집-->
         <scene sceneID="aiG-Fd-LE9">
@@ -478,8 +567,14 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,000,000원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3g-5r-iN3">
-                                                                    <rect key="frame" x="92" y="59" width="89.333333333333314" height="21"/>
-                                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                                                    <rect key="frame" x="92" y="63" width="75.666666666666686" height="17"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아주 화사한 꽃이에요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ljw-mX-WbH">
+                                                                    <rect key="frame" x="92.000000000000014" y="36" width="129.33333333333337" height="18"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -490,10 +585,13 @@
                                                                 <constraint firstItem="R3G-aS-aJg" firstAttribute="leading" secondItem="xBq-ds-fxe" secondAttribute="trailing" constant="10" id="9Cb-sK-Zcc"/>
                                                                 <constraint firstItem="xBq-ds-fxe" firstAttribute="leading" secondItem="Ur2-A8-C88" secondAttribute="leading" constant="12" id="PFr-eT-02R"/>
                                                                 <constraint firstItem="C3g-5r-iN3" firstAttribute="bottom" secondItem="xBq-ds-fxe" secondAttribute="bottom" id="ajd-2Q-dmV"/>
+                                                                <constraint firstItem="ljw-mX-WbH" firstAttribute="leading" secondItem="xBq-ds-fxe" secondAttribute="trailing" constant="10" id="l5h-5d-7eg"/>
                                                                 <constraint firstItem="xBq-ds-fxe" firstAttribute="top" secondItem="Ur2-A8-C88" secondAttribute="top" constant="10" id="lQ5-ce-jII"/>
+                                                                <constraint firstItem="ljw-mX-WbH" firstAttribute="centerY" secondItem="xBq-ds-fxe" secondAttribute="centerY" id="va3-6c-YfM"/>
                                                             </constraints>
                                                         </tableViewCellContentView>
                                                         <connections>
+                                                            <outlet property="descriptionLabel" destination="ljw-mX-WbH" id="Rb8-Xu-m4Z"/>
                                                             <outlet property="menuImageView" destination="xBq-ds-fxe" id="8xC-Ib-92D"/>
                                                             <outlet property="nameLabel" destination="R3G-aS-aJg" id="MyX-lm-dlm"/>
                                                             <outlet property="priceLabel" destination="C3g-5r-iN3" id="iAu-8l-Inx"/>
@@ -598,6 +696,7 @@
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="leaf.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="leaf.fill" catalog="system" width="128" height="109"/>
         <image name="map" catalog="system" width="128" height="112"/>
         <image name="map.fill" catalog="system" width="128" height="110"/>
         <image name="person" catalog="system" width="128" height="121"/>

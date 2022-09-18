@@ -13,6 +13,7 @@ class HomeDetailTableViewCell: UITableViewCell {
     @IBOutlet var menuImageView: UIImageView!
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var priceLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
