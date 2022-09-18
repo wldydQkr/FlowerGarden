@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C012FD5728D710C800A755C0 /* LikeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C012FD5628D710C800A755C0 /* LikeDetailViewController.swift */; };
 		C0745AE228D314F7009B9D7F /* HomeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0745AE128D314F7009B9D7F /* HomeDetailViewController.swift */; };
 		C0AD121528D2EE99003A87C5 /* StoreListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AD121428D2EE99003A87C5 /* StoreListTableViewCell.swift */; };
 		C0B2959B28D22ABA00633C21 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C0B2959A28D22ABA00633C21 /* SnapKit */; };
+		C0B72C2028D6E98900077682 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B72C1F28D6E98900077682 /* UserTableViewCell.swift */; };
 		C0B8AE6E28D0B38400C256D8 /* HomeBannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B8AE6D28D0B38400C256D8 /* HomeBannerCollectionViewCell.swift */; };
+		C0CFBDCD28D6EE8400B639D2 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CFBDCC28D6EE8400B639D2 /* UserDetailViewController.swift */; };
+		C0CFBDD028D7022800B639D2 /* LikeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CFBDCF28D7022800B639D2 /* LikeCollectionViewCell.swift */; };
 		C0E7749628D3994C00FB9A5F /* HomeDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E7749528D3994C00FB9A5F /* HomeDetailTableViewCell.swift */; };
 		C0EDD93D28D0A9B4004086FD /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EDD93C28D0A9B4004086FD /* MapViewController.swift */; };
 		C0EDD93F28D0A9CF004086FD /* LikeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EDD93E28D0A9CF004086FD /* LikeViewController.swift */; };
@@ -24,9 +28,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C012FD5628D710C800A755C0 /* LikeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeDetailViewController.swift; sourceTree = "<group>"; };
 		C0745AE128D314F7009B9D7F /* HomeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailViewController.swift; sourceTree = "<group>"; };
 		C0AD121428D2EE99003A87C5 /* StoreListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreListTableViewCell.swift; sourceTree = "<group>"; };
+		C0B72C1F28D6E98900077682 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		C0B8AE6D28D0B38400C256D8 /* HomeBannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBannerCollectionViewCell.swift; sourceTree = "<group>"; };
+		C0CFBDCC28D6EE8400B639D2 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		C0CFBDCF28D7022800B639D2 /* LikeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeCollectionViewCell.swift; sourceTree = "<group>"; };
 		C0E7749528D3994C00FB9A5F /* HomeDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailTableViewCell.swift; sourceTree = "<group>"; };
 		C0EDD93C28D0A9B4004086FD /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		C0EDD93E28D0A9CF004086FD /* LikeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +65,8 @@
 			isa = PBXGroup;
 			children = (
 				C0745AE128D314F7009B9D7F /* HomeDetailViewController.swift */,
+				C0CFBDCC28D6EE8400B639D2 /* UserDetailViewController.swift */,
+				C012FD5628D710C800A755C0 /* LikeDetailViewController.swift */,
 			);
 			path = DetailView;
 			sourceTree = "<group>";
@@ -64,11 +74,29 @@
 		C0B8AE6F28D0B38900C256D8 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				C0B8AE6D28D0B38400C256D8 /* HomeBannerCollectionViewCell.swift */,
-				C0AD121428D2EE99003A87C5 /* StoreListTableViewCell.swift */,
-				C0E7749528D3994C00FB9A5F /* HomeDetailTableViewCell.swift */,
+				C0CFBDD128D7023200B639D2 /* collection */,
+				C0CFBDCE28D7020E00B639D2 /* table */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		C0CFBDCE28D7020E00B639D2 /* table */ = {
+			isa = PBXGroup;
+			children = (
+				C0AD121428D2EE99003A87C5 /* StoreListTableViewCell.swift */,
+				C0E7749528D3994C00FB9A5F /* HomeDetailTableViewCell.swift */,
+				C0B72C1F28D6E98900077682 /* UserTableViewCell.swift */,
+			);
+			path = table;
+			sourceTree = "<group>";
+		};
+		C0CFBDD128D7023200B639D2 /* collection */ = {
+			isa = PBXGroup;
+			children = (
+				C0B8AE6D28D0B38400C256D8 /* HomeBannerCollectionViewCell.swift */,
+				C0CFBDCF28D7022800B639D2 /* LikeCollectionViewCell.swift */,
+			);
+			path = collection;
 			sourceTree = "<group>";
 		};
 		C0EDD94228D0A9EF004086FD /* Scenes */ = {
@@ -193,10 +221,14 @@
 			files = (
 				C0F6A7BF28D0680200DAAACB /* HomeViewController.swift in Sources */,
 				C0EDD94128D0A9E2004086FD /* UserViewController.swift in Sources */,
+				C012FD5728D710C800A755C0 /* LikeDetailViewController.swift in Sources */,
+				C0CFBDCD28D6EE8400B639D2 /* UserDetailViewController.swift in Sources */,
+				C0B72C2028D6E98900077682 /* UserTableViewCell.swift in Sources */,
 				C0F6A7BB28D0680200DAAACB /* AppDelegate.swift in Sources */,
 				C0E7749628D3994C00FB9A5F /* HomeDetailTableViewCell.swift in Sources */,
 				C0745AE228D314F7009B9D7F /* HomeDetailViewController.swift in Sources */,
 				C0AD121528D2EE99003A87C5 /* StoreListTableViewCell.swift in Sources */,
+				C0CFBDD028D7022800B639D2 /* LikeCollectionViewCell.swift in Sources */,
 				C0F6A7BD28D0680200DAAACB /* SceneDelegate.swift in Sources */,
 				C0EDD93D28D0A9B4004086FD /* MapViewController.swift in Sources */,
 				C0B8AE6E28D0B38400C256D8 /* HomeBannerCollectionViewCell.swift in Sources */,
