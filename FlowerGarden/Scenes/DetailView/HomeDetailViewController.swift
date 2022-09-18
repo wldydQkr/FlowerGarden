@@ -35,6 +35,10 @@ final class HomeDetailViewController: UIViewController {
 
 extension HomeDetailViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "메뉴"
+    }
+    
 }
 
 extension HomeDetailViewController: UITableViewDataSource {
