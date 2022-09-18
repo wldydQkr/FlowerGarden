@@ -11,6 +11,10 @@ class UserViewController: UIViewController {
 
     let settingsArray = ["Settings", "Notification", "Like", "Help & Support"]
     
+    let settingImageIcon = ["gearshape.circle", "exclamationmark.circle", "heart.circle", "questionmark.circle"]
+    
+    var lbl: String = ""
+    
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
@@ -45,6 +49,7 @@ extension UserViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UserTableViewCell", for: indexPath) as? UserTableViewCell
         cell?.titleLabel.text = settingsArray[indexPath.row]
         cell?.selectionStyle = .none
+        cell?.tableCellImageView.image = UIImage(systemName: settingImageIcon[indexPath.row])
         
         
         

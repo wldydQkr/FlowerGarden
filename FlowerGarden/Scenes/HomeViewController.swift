@@ -43,7 +43,7 @@ extension HomeViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        tableView.rowHeight = 90.0
+        tableView.rowHeight = 70.0
         
         
     }
@@ -109,6 +109,7 @@ extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "StoreListTableViewCell", for: indexPath) as? StoreListTableViewCell
+        cell?.selectionStyle = .none
 
         return cell ?? UITableViewCell()
     }
