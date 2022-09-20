@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jHl-VT-4OD">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jHl-VT-4OD">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -15,7 +14,7 @@
             <objects>
                 <viewController id="X7C-37-QD8" customClass="MapViewController" customModule="FlowerGarden" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CdA-Li-e7I">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="7d8-jX-IFg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -31,11 +30,11 @@
             <objects>
                 <viewController id="kqZ-28-ZVX" customClass="UserViewController" customModule="FlowerGarden" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c7I-rF-Bcw">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Sxl-6L-TkI">
-                                <rect key="frame" x="121.66666666666669" y="114.99999999999999" width="150" height="146.66666666666669"/>
+                                <rect key="frame" x="132" y="99.5" width="150" height="147"/>
                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                 <color key="tintColor" systemColor="systemIndigoColor"/>
                                 <constraints>
@@ -50,36 +49,36 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Park Ji Yong" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kyC-mL-jNe">
-                                <rect key="frame" x="0.0" y="268" width="393" height="24"/>
+                                <rect key="frame" x="0.0" y="253" width="414" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="wlqkr1010@gmail.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHI-wD-2lq">
-                                <rect key="frame" x="0.0" y="295" width="393" height="16"/>
+                                <rect key="frame" x="0.0" y="280" width="414" height="16"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="S5C-Bf-zha">
-                                <rect key="frame" x="0.0" y="321" width="393" height="413"/>
+                                <rect key="frame" x="0.0" y="306" width="414" height="472"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserTableViewCell" rowHeight="61" id="RSY-uQ-b0B" customClass="UserTableViewCell" customModule="FlowerGarden" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="61"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="61"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RSY-uQ-b0B" id="8Hm-ae-V8b">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="61"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="61"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kW2-dC-zyr">
-                                                    <rect key="frame" x="62.000000000000007" y="23" width="68.666666666666686" height="21"/>
+                                                    <rect key="frame" x="62" y="23" width="68.5" height="21"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gearshape.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="KZM-4x-0cA">
-                                                    <rect key="frame" x="12" y="12.333333333333332" width="40" height="39.333333333333343"/>
+                                                    <rect key="frame" x="12" y="12" width="40" height="39.5"/>
                                                     <color key="tintColor" systemColor="systemIndigoColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="40" id="dhW-RX-2Iu"/>
@@ -87,7 +86,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ToA-0K-pG7">
-                                                    <rect key="frame" x="363" y="13" width="20" height="35.333333333333336"/>
+                                                    <rect key="frame" x="384" y="12.5" width="20" height="36"/>
                                                     <color key="tintColor" systemColor="systemIndigoColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="20" id="fpS-jC-acm"/>
@@ -114,7 +113,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eer-z6-6Jn">
-                                <rect key="frame" x="160" y="734" width="73" height="30"/>
+                                <rect key="frame" x="160" y="778" width="94" height="30"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                 <color key="tintColor" systemColor="systemRedColor"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -158,11 +157,11 @@
             <objects>
                 <viewController id="jW8-Jc-4Xw" customClass="UserDetailViewController" customModule="FlowerGarden" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PW1-hw-rmZ">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wa6-jR-7PG">
-                                <rect key="frame" x="175.66666666666666" y="415.66666666666669" width="42" height="21"/>
+                                <rect key="frame" x="186" y="437.5" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -189,30 +188,30 @@
             <objects>
                 <viewController id="LC0-5w-Qju" customClass="HomeViewController" customModule="FlowerGarden" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y44-zx-eJS">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tuQ-cG-VVi">
-                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6fH-k3-vei">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="2049"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="2108"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FlowerGarden_logo" translatesAutoresizingMaskIntoConstraints="NO" id="Qxn-mx-oa6">
-                                                <rect key="frame" x="140.66666666666666" y="0.0" width="112" height="62"/>
+                                                <rect key="frame" x="151" y="0.0" width="112" height="62"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="112" id="1YN-Q6-WrB"/>
                                                     <constraint firstAttribute="height" constant="62" id="tx6-Hm-ow3"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OOO 님 환영합니다!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evR-a5-HhT">
-                                                <rect key="frame" x="12" y="72" width="369" height="21"/>
+                                                <rect key="frame" x="12" y="72" width="390" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Q6s-2O-CWh">
-                                                <rect key="frame" x="12" y="103" width="369" height="280"/>
+                                                <rect key="frame" x="12" y="103" width="390" height="280"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="280" id="gti-rJ-U5E"/>
@@ -225,7 +224,7 @@
                                                 </collectionViewFlowLayout>
                                                 <cells>
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeBannerCollectionViewCell" id="U3N-SV-ayy" customClass="HomeBannerCollectionViewCell" customModule="FlowerGarden" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="-3.6666666666666665" width="431" height="287"/>
+                                                        <rect key="frame" x="0.0" y="-3.5" width="431" height="287"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Tka-Yb-PUR">
                                                             <rect key="frame" x="0.0" y="0.0" width="431" height="287"/>
@@ -249,26 +248,26 @@
                                                 </cells>
                                             </collectionView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="꽃집 리스트" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EkO-fc-CBF">
-                                                <rect key="frame" x="12" y="393" width="369" height="20.333333333333314"/>
+                                                <rect key="frame" x="12" y="393" width="390" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jG2-d1-Yyg">
-                                                <rect key="frame" x="0.0" y="423.33333333333337" width="393" height="1074.6666666666665"/>
+                                                <rect key="frame" x="0.0" y="423.5" width="414" height="1074.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1074.6700000000001" id="SUe-VU-tfJ"/>
                                                 </constraints>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoreListTableViewCell" rowHeight="98" id="8f3-ku-eIg" customClass="StoreListTableViewCell" customModule="FlowerGarden" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="50" width="393" height="98"/>
+                                                        <rect key="frame" x="0.0" y="44.5" width="414" height="98"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8f3-ku-eIg" id="JwA-Rc-btq">
-                                                            <rect key="frame" x="0.0" y="0.0" width="393" height="98"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="98"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaf.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wKb-Xk-5To">
-                                                                    <rect key="frame" x="12" y="6" width="60" height="58.666666666666671"/>
+                                                                    <rect key="frame" x="12" y="5.5" width="60" height="59"/>
                                                                     <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                                                     <color key="tintColor" systemColor="systemIndigoColor"/>
                                                                     <constraints>
@@ -283,19 +282,19 @@
                                                                     </userDefinedRuntimeAttributes>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="지용이의 꽃집 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zcR-vj-Lrg">
-                                                                    <rect key="frame" x="92" y="11.999999999999998" width="96.333333333333314" height="20.333333333333329"/>
+                                                                    <rect key="frame" x="92" y="12" width="96.5" height="20.5"/>
                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="좋아요 ❤️" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8N-Wg-XUN">
-                                                                    <rect key="frame" x="309.66666666666669" y="11.999999999999998" width="71.333333333333314" height="20.333333333333329"/>
+                                                                    <rect key="frame" x="330.5" y="12" width="71.5" height="20.5"/>
                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99개" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQ5-2e-Dro">
-                                                                    <rect key="frame" x="330.66666666666669" y="48" width="29.666666666666686" height="17"/>
+                                                                    <rect key="frame" x="351.5" y="48" width="29.5" height="17"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -394,11 +393,11 @@
             <objects>
                 <viewController id="uRi-mz-dcM" customClass="LikeViewController" customModule="FlowerGarden" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="haZ-Ot-OgM">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="06q-ap-9N0">
-                                <rect key="frame" x="0.0" y="113" width="393" height="656"/>
+                                <rect key="frame" x="0.0" y="98" width="414" height="715"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mDg-JB-tVC">
                                     <size key="itemSize" width="128" height="128"/>
@@ -408,14 +407,14 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LikeCollectionViewCell" id="OKu-b2-BcG" customClass="LikeCollectionViewCell" customModule="FlowerGarden" customModuleProvider="target">
-                                        <rect key="frame" x="0.66666666666666663" y="0.0" width="392" height="78"/>
+                                        <rect key="frame" x="11" y="0.0" width="392" height="78"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="eJV-0I-feB">
                                             <rect key="frame" x="0.0" y="0.0" width="392" height="78"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaf.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ka1-UR-LHy">
-                                                    <rect key="frame" x="12" y="1.6666666666666679" width="60" height="57.333333333333336"/>
+                                                    <rect key="frame" x="12" y="1.5" width="60" height="57.5"/>
                                                     <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                                     <color key="tintColor" systemColor="systemIndigoColor"/>
                                                     <constraints>
@@ -499,17 +498,17 @@
             <objects>
                 <viewController id="XnM-nX-3ed" customClass="HomeDetailViewController" customModule="FlowerGarden" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dJc-A8-I0C">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V6c-64-UH9">
-                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8M9-ID-hv9">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="715"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Banner_0" translatesAutoresizingMaskIntoConstraints="NO" id="P2z-fK-efi">
-                                                <rect key="frame" x="12" y="10" width="369" height="240"/>
+                                                <rect key="frame" x="12" y="10" width="390" height="240"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="240" id="vbO-2h-faM"/>
                                                 </constraints>
@@ -530,24 +529,24 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999개" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4kQ-gg-0eq">
-                                                <rect key="frame" x="52" y="260" width="329" height="21"/>
+                                                <rect key="frame" x="52" y="260" width="350" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="PNa-s2-WQt">
-                                                <rect key="frame" x="0.0" y="281" width="393" height="434"/>
+                                                <rect key="frame" x="0.0" y="281" width="414" height="493"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeDetailTableViewCell" rowHeight="100" id="8Q7-Wa-ybX" customClass="HomeDetailTableViewCell" customModule="FlowerGarden" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="55.333332061767578" width="393" height="100"/>
+                                                        <rect key="frame" x="0.0" y="49.5" width="414" height="100"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8Q7-Wa-ybX" id="Ur2-A8-C88">
-                                                            <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="xBq-ds-fxe">
-                                                                    <rect key="frame" x="12" y="12" width="70" height="66.666666666666671"/>
+                                                                    <rect key="frame" x="12" y="11.5" width="70" height="67"/>
                                                                     <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="70" id="8ae-i4-4e4"/>
@@ -561,19 +560,19 @@
                                                                     </userDefinedRuntimeAttributes>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="튤립" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3G-aS-aJg">
-                                                                    <rect key="frame" x="92" y="10" width="29.666666666666671" height="21"/>
+                                                                    <rect key="frame" x="92" y="10" width="29.5" height="21"/>
                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,000,000원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3g-5r-iN3">
-                                                                    <rect key="frame" x="92" y="63" width="75.666666666666686" height="17"/>
+                                                                    <rect key="frame" x="92" y="63" width="75.5" height="17"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아주 화사한 꽃이에요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ljw-mX-WbH">
-                                                                    <rect key="frame" x="92.000000000000014" y="36" width="129.33333333333337" height="18"/>
+                                                                    <rect key="frame" x="92" y="36" width="129" height="18"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -652,7 +651,7 @@
             <objects>
                 <navigationController id="jHl-VT-4OD" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Lbk-O0-ExY">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -689,17 +688,17 @@
         <image name="Banner_0" width="437" height="292"/>
         <image name="Banner_1" width="431" height="287"/>
         <image name="FlowerGarden_logo" width="232" height="122"/>
-        <image name="arrow.right" catalog="system" width="128" height="95"/>
-        <image name="gearshape.fill" catalog="system" width="128" height="123"/>
-        <image name="heart" catalog="system" width="128" height="107"/>
-        <image name="heart.fill" catalog="system" width="128" height="107"/>
-        <image name="house" catalog="system" width="128" height="104"/>
-        <image name="house.fill" catalog="system" width="128" height="104"/>
-        <image name="leaf.circle.fill" catalog="system" width="128" height="123"/>
-        <image name="leaf.fill" catalog="system" width="128" height="109"/>
-        <image name="map" catalog="system" width="128" height="112"/>
+        <image name="arrow.right" catalog="system" width="128" height="98"/>
+        <image name="gearshape.fill" catalog="system" width="128" height="121"/>
+        <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="heart.fill" catalog="system" width="128" height="109"/>
+        <image name="house" catalog="system" width="128" height="106"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="leaf.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="leaf.fill" catalog="system" width="128" height="106"/>
+        <image name="map" catalog="system" width="128" height="110"/>
         <image name="map.fill" catalog="system" width="128" height="110"/>
-        <image name="person" catalog="system" width="128" height="121"/>
+        <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
