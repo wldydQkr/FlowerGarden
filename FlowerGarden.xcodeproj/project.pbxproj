@@ -11,6 +11,10 @@
 		123B112F28D4F9440034764D /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 123B112E28D4F9440034764D /* FirebaseAnalytics */; };
 		123B113128D4F9440034764D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 123B113028D4F9440034764D /* FirebaseAuth */; };
 		123B113328D4F9440034764D /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 123B113228D4F9440034764D /* FirebaseDatabase */; };
+		12B51E1028D5A03C00F9CD34 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B51E0F28D5A03C00F9CD34 /* LoginViewController.swift */; };
+		12CA7B1F28D8E1F7001E68D2 /* EmailLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CA7B1E28D8E1F7001E68D2 /* EmailLoginViewController.swift */; };
+		12E227C928D787E3009103B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12E227C828D787E2009103B4 /* Assets.xcassets */; };
+		715B33D0B84F96F5A11F44C7 /* Pods_FlowerGarden.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDC53FE79011D5BB2C8D745 /* Pods_FlowerGarden.framework */; };
 		C0745AE228D314F7009B9D7F /* HomeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0745AE128D314F7009B9D7F /* HomeDetailViewController.swift */; };
 		C0AD121528D2EE99003A87C5 /* StoreListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AD121428D2EE99003A87C5 /* StoreListTableViewCell.swift */; };
 		C0B2959B28D22ABA00633C21 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C0B2959A28D22ABA00633C21 /* SnapKit */; };
@@ -23,12 +27,15 @@
 		C0F6A7BD28D0680200DAAACB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F6A7BC28D0680200DAAACB /* SceneDelegate.swift */; };
 		C0F6A7BF28D0680200DAAACB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F6A7BE28D0680200DAAACB /* HomeViewController.swift */; };
 		C0F6A7C228D0680200DAAACB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0F6A7C028D0680200DAAACB /* Main.storyboard */; };
-		C0F6A7C428D0680400DAAACB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0F6A7C328D0680400DAAACB /* Assets.xcassets */; };
 		C0F6A7C728D0680400DAAACB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0F6A7C528D0680400DAAACB /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		123B112B28D4F8E10034764D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		12B51E0F28D5A03C00F9CD34 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		12CA7B1E28D8E1F7001E68D2 /* EmailLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginViewController.swift; sourceTree = "<group>"; };
+		12E227C828D787E2009103B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
+		31CF3642A80D8BF96A5D7470 /* Pods-FlowerGarden.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowerGarden.debug.xcconfig"; path = "Target Support Files/Pods-FlowerGarden/Pods-FlowerGarden.debug.xcconfig"; sourceTree = "<group>"; };
 		C0745AE128D314F7009B9D7F /* HomeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailViewController.swift; sourceTree = "<group>"; };
 		C0AD121428D2EE99003A87C5 /* StoreListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreListTableViewCell.swift; sourceTree = "<group>"; };
 		C0B8AE6D28D0B38400C256D8 /* HomeBannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBannerCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -41,9 +48,10 @@
 		C0F6A7BC28D0680200DAAACB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C0F6A7BE28D0680200DAAACB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C0F6A7C128D0680200DAAACB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C0F6A7C328D0680400DAAACB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C0F6A7C628D0680400DAAACB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C0F6A7C828D0680400DAAACB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E70C6BA5A10CA9AD5D234692 /* Pods-FlowerGarden.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowerGarden.release.xcconfig"; path = "Target Support Files/Pods-FlowerGarden/Pods-FlowerGarden.release.xcconfig"; sourceTree = "<group>"; };
+		FDDC53FE79011D5BB2C8D745 /* Pods_FlowerGarden.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlowerGarden.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,12 +63,22 @@
 				123B113128D4F9440034764D /* FirebaseAuth in Frameworks */,
 				123B113328D4F9440034764D /* FirebaseDatabase in Frameworks */,
 				C0B2959B28D22ABA00633C21 /* SnapKit in Frameworks */,
+				715B33D0B84F96F5A11F44C7 /* Pods_FlowerGarden.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA8F8B26540879FAA8782DDD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				31CF3642A80D8BF96A5D7470 /* Pods-FlowerGarden.debug.xcconfig */,
+				E70C6BA5A10CA9AD5D234692 /* Pods-FlowerGarden.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C0745AE328D31517009B9D7F /* DetailView */ = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +100,8 @@
 		C0EDD94228D0A9EF004086FD /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				12B51E0F28D5A03C00F9CD34 /* LoginViewController.swift */,
+				12CA7B1E28D8E1F7001E68D2 /* EmailLoginViewController.swift */,
 				C0F6A7BE28D0680200DAAACB /* HomeViewController.swift */,
 				C0EDD93C28D0A9B4004086FD /* MapViewController.swift */,
 				C0EDD93E28D0A9CF004086FD /* LikeViewController.swift */,
@@ -97,6 +117,8 @@
 			children = (
 				C0F6A7B928D0680200DAAACB /* FlowerGarden */,
 				C0F6A7B828D0680200DAAACB /* Products */,
+				AA8F8B26540879FAA8782DDD /* Pods */,
+				FD1167F7F54466BB3E31316E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,11 +138,19 @@
 				C0EDD94228D0A9EF004086FD /* Scenes */,
 				C0F6A7C028D0680200DAAACB /* Main.storyboard */,
 				123B112B28D4F8E10034764D /* GoogleService-Info.plist */,
-				C0F6A7C328D0680400DAAACB /* Assets.xcassets */,
 				C0F6A7C528D0680400DAAACB /* LaunchScreen.storyboard */,
 				C0F6A7C828D0680400DAAACB /* Info.plist */,
+				12E227C828D787E2009103B4 /* Assets.xcassets */,
 			);
 			path = FlowerGarden;
+			sourceTree = "<group>";
+		};
+		FD1167F7F54466BB3E31316E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FDDC53FE79011D5BB2C8D745 /* Pods_FlowerGarden.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,9 +160,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C0F6A7CB28D0680400DAAACB /* Build configuration list for PBXNativeTarget "FlowerGarden" */;
 			buildPhases = (
+				FF55A742D46C5664602E8D1E /* [CP] Check Pods Manifest.lock */,
 				C0F6A7B328D0680200DAAACB /* Sources */,
 				C0F6A7B428D0680200DAAACB /* Frameworks */,
 				C0F6A7B528D0680200DAAACB /* Resources */,
+				35DCAC3FF82F697B4B0BF64C /* [CP] Embed Pods Frameworks */,
+				E935A389D57CDC65E2F85F84 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,12 +226,71 @@
 			files = (
 				C0F6A7C728D0680400DAAACB /* LaunchScreen.storyboard in Resources */,
 				123B112C28D4F8E10034764D /* GoogleService-Info.plist in Resources */,
-				C0F6A7C428D0680400DAAACB /* Assets.xcassets in Resources */,
 				C0F6A7C228D0680200DAAACB /* Main.storyboard in Resources */,
+				12E227C928D787E3009103B4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		35DCAC3FF82F697B4B0BF64C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlowerGarden/Pods-FlowerGarden-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlowerGarden/Pods-FlowerGarden-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FlowerGarden/Pods-FlowerGarden-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E935A389D57CDC65E2F85F84 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlowerGarden/Pods-FlowerGarden-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlowerGarden/Pods-FlowerGarden-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FlowerGarden/Pods-FlowerGarden-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF55A742D46C5664602E8D1E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FlowerGarden-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C0F6A7B328D0680200DAAACB /* Sources */ = {
@@ -206,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0F6A7BF28D0680200DAAACB /* HomeViewController.swift in Sources */,
+				12CA7B1F28D8E1F7001E68D2 /* EmailLoginViewController.swift in Sources */,
 				C0EDD94128D0A9E2004086FD /* UserViewController.swift in Sources */,
 				C0F6A7BB28D0680200DAAACB /* AppDelegate.swift in Sources */,
 				C0E7749628D3994C00FB9A5F /* HomeDetailTableViewCell.swift in Sources */,
@@ -215,6 +308,7 @@
 				C0EDD93D28D0A9B4004086FD /* MapViewController.swift in Sources */,
 				C0B8AE6E28D0B38400C256D8 /* HomeBannerCollectionViewCell.swift in Sources */,
 				C0EDD93F28D0A9CF004086FD /* LikeViewController.swift in Sources */,
+				12B51E1028D5A03C00F9CD34 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +441,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -356,12 +451,15 @@
 		};
 		C0F6A7CC28D0680400DAAACB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31CF3642A80D8BF96A5D7470 /* Pods-FlowerGarden.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6NDM2TJS37;
+				EXCLUDED_ARCHS = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlowerGarden/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -384,12 +482,15 @@
 		};
 		C0F6A7CD28D0680400DAAACB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E70C6BA5A10CA9AD5D234692 /* Pods-FlowerGarden.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6NDM2TJS37;
+				EXCLUDED_ARCHS = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlowerGarden/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -402,6 +503,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = kr.ac.induk.FlowerGardenn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

@@ -7,11 +7,13 @@
 
 import UIKit
 import SnapKit
+import FirebaseAuth
 
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var bannerCollectionView: UICollectionView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var userWelcome: UILabel!
     
     @IBOutlet var scrollView: UIScrollView!
     
@@ -26,7 +28,18 @@ class HomeViewController: UIViewController {
         bannerTimer()
         
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        
+        if let userInfo = Auth.auth().currentUser?.providerData[0] {
+            userWelcome.text = "\(userInfo.displayName ?? "고객") 님 환영합니다."
+        }
+        else {
+            userWelcome.text = "고객님 환영합니다."
+        }
+    }
 }
 
 //MARK: setupLayout
