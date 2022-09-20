@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C397DC235DF8E84C5334D19 /* Pods_FlowerGarden.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F32C68FFA32B7D1761D53B3E /* Pods_FlowerGarden.framework */; };
 		C012FD5728D710C800A755C0 /* LikeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C012FD5628D710C800A755C0 /* LikeDetailViewController.swift */; };
 		C0745AE228D314F7009B9D7F /* HomeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0745AE128D314F7009B9D7F /* HomeDetailViewController.swift */; };
 		C0AD121528D2EE99003A87C5 /* StoreListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AD121428D2EE99003A87C5 /* StoreListTableViewCell.swift */; };
-		C0B2959B28D22ABA00633C21 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C0B2959A28D22ABA00633C21 /* SnapKit */; };
 		C0B72C2028D6E98900077682 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B72C1F28D6E98900077682 /* UserTableViewCell.swift */; };
 		C0B8AE6E28D0B38400C256D8 /* HomeBannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B8AE6D28D0B38400C256D8 /* HomeBannerCollectionViewCell.swift */; };
 		C0CFBDCD28D6EE8400B639D2 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CFBDCC28D6EE8400B639D2 /* UserDetailViewController.swift */; };
@@ -28,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1BE388F886460B847F5F759F /* Pods-FlowerGarden.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowerGarden.release.xcconfig"; path = "Target Support Files/Pods-FlowerGarden/Pods-FlowerGarden.release.xcconfig"; sourceTree = "<group>"; };
 		C012FD5628D710C800A755C0 /* LikeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeDetailViewController.swift; sourceTree = "<group>"; };
 		C0745AE128D314F7009B9D7F /* HomeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailViewController.swift; sourceTree = "<group>"; };
 		C0AD121428D2EE99003A87C5 /* StoreListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreListTableViewCell.swift; sourceTree = "<group>"; };
@@ -47,6 +48,8 @@
 		C0F6A7C328D0680400DAAACB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C0F6A7C628D0680400DAAACB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C0F6A7C828D0680400DAAACB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1E151D5FEF1AD656C5A02E5 /* Pods-FlowerGarden.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowerGarden.debug.xcconfig"; path = "Target Support Files/Pods-FlowerGarden/Pods-FlowerGarden.debug.xcconfig"; sourceTree = "<group>"; };
+		F32C68FFA32B7D1761D53B3E /* Pods_FlowerGarden.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlowerGarden.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,13 +57,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0B2959B28D22ABA00633C21 /* SnapKit in Frameworks */,
+				2C397DC235DF8E84C5334D19 /* Pods_FlowerGarden.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A6E9E4A57ECB83DFC779DE6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F1E151D5FEF1AD656C5A02E5 /* Pods-FlowerGarden.debug.xcconfig */,
+				1BE388F886460B847F5F759F /* Pods-FlowerGarden.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C0745AE328D31517009B9D7F /* DetailView */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +130,8 @@
 			children = (
 				C0F6A7B928D0680200DAAACB /* FlowerGarden */,
 				C0F6A7B828D0680200DAAACB /* Products */,
+				5A6E9E4A57ECB83DFC779DE6 /* Pods */,
+				EA036FA47E6BDBF570B1E0C9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,6 +157,14 @@
 			path = FlowerGarden;
 			sourceTree = "<group>";
 		};
+		EA036FA47E6BDBF570B1E0C9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F32C68FFA32B7D1761D53B3E /* Pods_FlowerGarden.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -149,18 +172,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C0F6A7CB28D0680400DAAACB /* Build configuration list for PBXNativeTarget "FlowerGarden" */;
 			buildPhases = (
+				81FDD6D8B1395D0761372151 /* [CP] Check Pods Manifest.lock */,
 				C0F6A7B328D0680200DAAACB /* Sources */,
 				C0F6A7B428D0680200DAAACB /* Frameworks */,
 				C0F6A7B528D0680200DAAACB /* Resources */,
+				EA04DA4214D46EB07E1F0B81 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = FlowerGarden;
-			packageProductDependencies = (
-				C0B2959A28D22ABA00633C21 /* SnapKit */,
-			);
 			productName = FlowerGarden;
 			productReference = C0F6A7B728D0680200DAAACB /* FlowerGarden.app */;
 			productType = "com.apple.product-type.application";
@@ -189,9 +211,6 @@
 				Base,
 			);
 			mainGroup = C0F6A7AE28D0680100DAAACB;
-			packageReferences = (
-				C0B2959928D22ABA00633C21 /* XCRemoteSwiftPackageReference "SnapKit" */,
-			);
 			productRefGroup = C0F6A7B828D0680200DAAACB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -213,6 +232,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		81FDD6D8B1395D0761372151 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FlowerGarden-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA04DA4214D46EB07E1F0B81 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlowerGarden/Pods-FlowerGarden-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlowerGarden/Pods-FlowerGarden-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FlowerGarden/Pods-FlowerGarden-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C0F6A7B328D0680200DAAACB /* Sources */ = {
@@ -374,12 +435,13 @@
 		};
 		C0F6A7CC28D0680400DAAACB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1E151D5FEF1AD656C5A02E5 /* Pods-FlowerGarden.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6NDM2TJS37;
+				DEVELOPMENT_TEAM = 5VQ9DRSPK5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlowerGarden/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -392,7 +454,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = kr.ac.induk.FlowerGardenn;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.ac.induk.FlowerGarden;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -402,12 +464,13 @@
 		};
 		C0F6A7CD28D0680400DAAACB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BE388F886460B847F5F759F /* Pods-FlowerGarden.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6NDM2TJS37;
+				DEVELOPMENT_TEAM = 5VQ9DRSPK5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlowerGarden/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -420,7 +483,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = kr.ac.induk.FlowerGardenn;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.ac.induk.FlowerGarden;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -450,25 +513,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		C0B2959928D22ABA00633C21 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		C0B2959A28D22ABA00633C21 /* SnapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C0B2959928D22ABA00633C21 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = SnapKit;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C0F6A7AF28D0680100DAAACB /* Project object */;
 }
