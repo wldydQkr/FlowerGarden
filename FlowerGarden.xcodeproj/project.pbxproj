@@ -14,6 +14,8 @@
 		12B51E1028D5A03C00F9CD34 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B51E0F28D5A03C00F9CD34 /* LoginViewController.swift */; };
 		12CA7B1F28D8E1F7001E68D2 /* EmailLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CA7B1E28D8E1F7001E68D2 /* EmailLoginViewController.swift */; };
 		12E227C928D787E3009103B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12E227C828D787E2009103B4 /* Assets.xcassets */; };
+		12F95A6828DC469D00BA642B /* OwnerUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F95A6728DC469D00BA642B /* OwnerUserViewController.swift */; };
+		12F95A6A28DF63D000BA642B /* SignUpOwnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F95A6928DF63D000BA642B /* SignUpOwnerViewController.swift */; };
 		715B33D0B84F96F5A11F44C7 /* Pods_FlowerGarden.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDDC53FE79011D5BB2C8D745 /* Pods_FlowerGarden.framework */; };
 		C0745AE228D314F7009B9D7F /* HomeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0745AE128D314F7009B9D7F /* HomeDetailViewController.swift */; };
 		C0AD121528D2EE99003A87C5 /* StoreListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AD121428D2EE99003A87C5 /* StoreListTableViewCell.swift */; };
@@ -35,6 +37,8 @@
 		12B51E0F28D5A03C00F9CD34 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		12CA7B1E28D8E1F7001E68D2 /* EmailLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginViewController.swift; sourceTree = "<group>"; };
 		12E227C828D787E2009103B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
+		12F95A6728DC469D00BA642B /* OwnerUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerUserViewController.swift; sourceTree = "<group>"; };
+		12F95A6928DF63D000BA642B /* SignUpOwnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpOwnerViewController.swift; sourceTree = "<group>"; };
 		31CF3642A80D8BF96A5D7470 /* Pods-FlowerGarden.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowerGarden.debug.xcconfig"; path = "Target Support Files/Pods-FlowerGarden/Pods-FlowerGarden.debug.xcconfig"; sourceTree = "<group>"; };
 		C0745AE128D314F7009B9D7F /* HomeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailViewController.swift; sourceTree = "<group>"; };
 		C0AD121428D2EE99003A87C5 /* StoreListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreListTableViewCell.swift; sourceTree = "<group>"; };
@@ -100,7 +104,9 @@
 		C0EDD94228D0A9EF004086FD /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				12F95A6728DC469D00BA642B /* OwnerUserViewController.swift */,
 				12B51E0F28D5A03C00F9CD34 /* LoginViewController.swift */,
+				12F95A6928DF63D000BA642B /* SignUpOwnerViewController.swift */,
 				12CA7B1E28D8E1F7001E68D2 /* EmailLoginViewController.swift */,
 				C0F6A7BE28D0680200DAAACB /* HomeViewController.swift */,
 				C0EDD93C28D0A9B4004086FD /* MapViewController.swift */,
@@ -303,12 +309,14 @@
 				C0F6A7BB28D0680200DAAACB /* AppDelegate.swift in Sources */,
 				C0E7749628D3994C00FB9A5F /* HomeDetailTableViewCell.swift in Sources */,
 				C0745AE228D314F7009B9D7F /* HomeDetailViewController.swift in Sources */,
+				12F95A6A28DF63D000BA642B /* SignUpOwnerViewController.swift in Sources */,
 				C0AD121528D2EE99003A87C5 /* StoreListTableViewCell.swift in Sources */,
 				C0F6A7BD28D0680200DAAACB /* SceneDelegate.swift in Sources */,
 				C0EDD93D28D0A9B4004086FD /* MapViewController.swift in Sources */,
 				C0B8AE6E28D0B38400C256D8 /* HomeBannerCollectionViewCell.swift in Sources */,
 				C0EDD93F28D0A9CF004086FD /* LikeViewController.swift in Sources */,
 				12B51E1028D5A03C00F9CD34 /* LoginViewController.swift in Sources */,
+				12F95A6828DC469D00BA642B /* OwnerUserViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -34,10 +34,21 @@ class HomeViewController: UIViewController {
         
         
         if let userInfo = Auth.auth().currentUser?.providerData[0] {
-            userWelcome.text = "\(userInfo.displayName ?? "고객") 님 환영합니다."
+            let user = Auth.auth().currentUser
+            if let user = user {
+              let uid = user.uid
+              let email = user.email
+              let photoURL = user.photoURL
+              var multiFactorString = "MultiFactor: "
+              for info in user.multiFactor.enrolledFactors {
+                multiFactorString += info.displayName ?? "[DispayName]"
+                multiFactorString += " "
+              }
+            }
+            userWelcome.text = "\(userInfo.displayName ?? user?.email ?? "고객") 님 환영합니다."
         }
         else {
-            userWelcome.text = "고객님 환영합니다."
+            userWelcome.text = "OOO 님 환영합니다."
         }
     }
 }

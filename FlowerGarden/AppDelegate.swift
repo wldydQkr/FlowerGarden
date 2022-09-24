@@ -9,6 +9,7 @@ import UIKit
 import FirebaseCore
 import GoogleSignIn
 import FirebaseAuth
+import FirebaseDatabase
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
@@ -25,18 +26,64 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         // 사용자 인증값 가져오기
         guard let authentication = user.authentication else { return }
         let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
+        
         // Firebase Auth에 인증정보 등록하기
         Auth.auth().signIn(with: credential) { _, _ in
-            self.showMainViewController()    // 메인 화면으로 이동
+            
+            var ref: DatabaseReference!
+            ref = Database.database().reference()
+            
+            if LoginViewController.onwer {
+                let user = Auth.auth().currentUser
+                
+                // DB 데이터 가져오기
+                ref.child("onwer_list/\(user?.uid ?? "")/uid").getData(completion:  { error, snapshot in
+                    guard error == nil else {
+                        print(error!.localizedDescription)
+                        return;
+                    }
+                    let uid = snapshot?.value as? String ?? "uidError";
+                    
+                    // 로그인된 uid가 이미 DB에 있으면 메인화면으로
+                    if user?.uid == uid {
+                        self.showMainViewController()
+                    }
+                    // 로그인된 uid가 DB에 없으면
+                    else {
+                        // 점포 정보 입력하는 화면으로 이동
+                        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+                        let mainViewController = storyboard.instantiateViewController(withIdentifier: "SignUpOwnerViewController")
+                        mainViewController.modalPresentationStyle = .fullScreen
+                        //UIApplication.shared.windows.first?.rootViewController?.show(mainViewController, sender: nil)
+                        let scenes = UIApplication.shared.connectedScenes
+                        let windowScene = scenes.first as? UIWindowScene
+                        windowScene?.windows.first?.rootViewController?.show(mainViewController, sender: nil)
+                        // Real Database에 회원 저장
+                    }
+                });
+            }
+            else {
+                // 구글 회원 정보 불러오기
+                if let userInfo = Auth.auth().currentUser?.providerData[0] {
+                    let user = Auth.auth().currentUser
+                    
+                    // Real Database에 회원 저장
+                    ref.child("user_list").child(user?.uid ?? "uid").setValue(["uid": user?.uid, "name": userInfo.displayName, "email": userInfo.email])
+                }
+                self.showMainViewController()    // 메인 화면으로 이동
+            }
         }
     }
 
     // 메인 화면으로 이동하기
     private func showMainViewController() {
-      let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-      let mainViewController = storyboard.instantiateViewController(withIdentifier: "NavigationController")
-      mainViewController.modalPresentationStyle = .fullScreen
-      UIApplication.shared.windows.first?.rootViewController?.show(mainViewController, sender: nil)
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let mainViewController = storyboard.instantiateViewController(withIdentifier: "NavigationController")
+        mainViewController.modalPresentationStyle = .fullScreen
+        //UIApplication.shared.windows.first?.rootViewController?.show(mainViewController, sender: nil)
+        let scenes = UIApplication.shared.connectedScenes
+        let windowScene = scenes.first as? UIWindowScene
+        windowScene?.windows.first?.rootViewController?.show(mainViewController, sender: nil)
     }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {

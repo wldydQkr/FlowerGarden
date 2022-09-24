@@ -14,6 +14,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var googleLoginButton: GIDSignInButton!
     @IBOutlet weak var appleLoginButton: UIButton!
     
+    static var onwer: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,11 +29,11 @@ class LoginViewController: UIViewController {
 
     @IBAction func emailLoginButtonTapped(_ sender: Any) {
         let emailLoginViewController = storyboard?.instantiateViewController(identifier: "EmailLogin")
-        
         //navigation
     }
     
     @IBAction func googleLoginButtonTapped(_ sender: UIButton) {
         GIDSignIn.sharedInstance().signIn() // 구글 로그인 화면 열기
+        print(LoginViewController.onwer)
     }
 }
