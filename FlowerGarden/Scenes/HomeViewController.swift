@@ -6,8 +6,18 @@
 //
 
 import UIKit
+import Lottie
 
 class HomeViewController: UIViewController {
+    
+    let animationView: AnimationView = {
+        
+        let aniView = AnimationView(name: "women-day-flower-delivery.json")
+        aniView.frame = CGRect(x: 0, y: 0, width: 0, height: 0)
+        aniView.contentMode = .scaleAspectFill
+        
+        return aniView
+    }()
 
     @IBOutlet weak var bannerCollectionView: UICollectionView!
     @IBOutlet weak var tableView: UITableView!
@@ -21,6 +31,8 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        lottie()
+        
         setupLayout()
         bannerTimer()
         
@@ -30,6 +42,19 @@ class HomeViewController: UIViewController {
 
 //MARK: setupLayout
 extension HomeViewController {
+    
+    func lottie() {
+        // 뷰가 끝나고 MainView 등장
+        animationView.play { (finish) in
+            print("애니메이션 끝!")
+            
+            // 뷰 삭제
+            self.animationView.removeFromSuperview()
+            
+            //title
+        }
+    }
+    
     func setupLayout() {
         
         

@@ -30,6 +30,7 @@
 /* Begin PBXFileReference section */
 		1BE388F886460B847F5F759F /* Pods-FlowerGarden.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowerGarden.release.xcconfig"; path = "Target Support Files/Pods-FlowerGarden/Pods-FlowerGarden.release.xcconfig"; sourceTree = "<group>"; };
 		C012FD5628D710C800A755C0 /* LikeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeDetailViewController.swift; sourceTree = "<group>"; };
+		C012FD6D28DF6A5100A755C0 /* women-day-flower-delivery.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "women-day-flower-delivery.json"; sourceTree = "<group>"; };
 		C0745AE128D314F7009B9D7F /* HomeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailViewController.swift; sourceTree = "<group>"; };
 		C0AD121428D2EE99003A87C5 /* StoreListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreListTableViewCell.swift; sourceTree = "<group>"; };
 		C0B72C1F28D6E98900077682 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
@@ -70,7 +71,6 @@
 				F1E151D5FEF1AD656C5A02E5 /* Pods-FlowerGarden.debug.xcconfig */,
 				1BE388F886460B847F5F759F /* Pods-FlowerGarden.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -148,6 +148,7 @@
 			children = (
 				C0F6A7BA28D0680200DAAACB /* AppDelegate.swift */,
 				C0F6A7BC28D0680200DAAACB /* SceneDelegate.swift */,
+				C012FD6D28DF6A5100A755C0 /* women-day-flower-delivery.json */,
 				C0EDD94228D0A9EF004086FD /* Scenes */,
 				C0F6A7C028D0680200DAAACB /* Main.storyboard */,
 				C0F6A7C328D0680400DAAACB /* Assets.xcassets */,
