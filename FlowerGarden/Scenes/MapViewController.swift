@@ -17,8 +17,12 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         // Do any additional setup after loading the view.
         
         let mapView = NMFMapView(frame: view.frame)
+        let naverMapView = NMFNaverMapView()
         view.addSubview(mapView)
         
+        naverMapView.showCompass = true
+        naverMapView.showLocationButton = true
+        naverMapView.positionMode = .direction
         mapView.positionMode = .normal
 
         locationManager.delegate = self
@@ -60,10 +64,13 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
                 for marker in markers {
                     marker.mapView = mapView
                 }
+                
             }
         }
         // ------------------------------마커 여러개 찍기 -----------------------------------------
 
+        
+        
     }
     
 }
