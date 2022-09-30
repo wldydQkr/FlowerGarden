@@ -26,6 +26,8 @@ class UserViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupViews()
+        
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -33,6 +35,13 @@ class UserViewController: UIViewController {
 
     }
 
+}
+
+extension UserViewController {
+    func setupViews() {
+        nameLabel.text = "shim Du Yong"
+        emailLabel.text = "duyong123@gmail.com"
+    }
 }
 
 extension UserViewController: UITableViewDelegate {

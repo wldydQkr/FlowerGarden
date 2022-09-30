@@ -10,6 +10,9 @@
 		2C397DC235DF8E84C5334D19 /* Pods_FlowerGarden.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F32C68FFA32B7D1761D53B3E /* Pods_FlowerGarden.framework */; };
 		C012FD5728D710C800A755C0 /* LikeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C012FD5628D710C800A755C0 /* LikeDetailViewController.swift */; };
 		C0745AE228D314F7009B9D7F /* HomeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0745AE128D314F7009B9D7F /* HomeDetailViewController.swift */; };
+		C0819D6D28E5BB2800210227 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C0819D6C28E5BB2800210227 /* GoogleService-Info.plist */; };
+		C0819D6F28E5D7E600210227 /* a-botanical-wreath-loading.json in Resources */ = {isa = PBXBuildFile; fileRef = C0819D6E28E5D7E600210227 /* a-botanical-wreath-loading.json */; };
+		C0819D7328E6EEB700210227 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0819D7228E6EEB700210227 /* TabBarController.swift */; };
 		C0AD121528D2EE99003A87C5 /* StoreListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AD121428D2EE99003A87C5 /* StoreListTableViewCell.swift */; };
 		C0B72C2028D6E98900077682 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B72C1F28D6E98900077682 /* UserTableViewCell.swift */; };
 		C0B8AE6E28D0B38400C256D8 /* HomeBannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B8AE6D28D0B38400C256D8 /* HomeBannerCollectionViewCell.swift */; };
@@ -30,8 +33,10 @@
 /* Begin PBXFileReference section */
 		1BE388F886460B847F5F759F /* Pods-FlowerGarden.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlowerGarden.release.xcconfig"; path = "Target Support Files/Pods-FlowerGarden/Pods-FlowerGarden.release.xcconfig"; sourceTree = "<group>"; };
 		C012FD5628D710C800A755C0 /* LikeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeDetailViewController.swift; sourceTree = "<group>"; };
-		C012FD6D28DF6A5100A755C0 /* women-day-flower-delivery.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "women-day-flower-delivery.json"; sourceTree = "<group>"; };
 		C0745AE128D314F7009B9D7F /* HomeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailViewController.swift; sourceTree = "<group>"; };
+		C0819D6C28E5BB2800210227 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C0819D6E28E5D7E600210227 /* a-botanical-wreath-loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "a-botanical-wreath-loading.json"; path = "../../../../../Downloads/a-botanical-wreath-loading.json"; sourceTree = "<group>"; };
+		C0819D7228E6EEB700210227 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		C0AD121428D2EE99003A87C5 /* StoreListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreListTableViewCell.swift; sourceTree = "<group>"; };
 		C0B72C1F28D6E98900077682 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		C0B8AE6D28D0B38400C256D8 /* HomeBannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBannerCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -148,12 +153,14 @@
 			children = (
 				C0F6A7BA28D0680200DAAACB /* AppDelegate.swift */,
 				C0F6A7BC28D0680200DAAACB /* SceneDelegate.swift */,
-				C012FD6D28DF6A5100A755C0 /* women-day-flower-delivery.json */,
+				C0819D7228E6EEB700210227 /* TabBarController.swift */,
+				C0819D6E28E5D7E600210227 /* a-botanical-wreath-loading.json */,
 				C0EDD94228D0A9EF004086FD /* Scenes */,
 				C0F6A7C028D0680200DAAACB /* Main.storyboard */,
 				C0F6A7C328D0680400DAAACB /* Assets.xcassets */,
 				C0F6A7C528D0680400DAAACB /* LaunchScreen.storyboard */,
 				C0F6A7C828D0680400DAAACB /* Info.plist */,
+				C0819D6C28E5BB2800210227 /* GoogleService-Info.plist */,
 			);
 			path = FlowerGarden;
 			sourceTree = "<group>";
@@ -227,6 +234,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0F6A7C728D0680400DAAACB /* LaunchScreen.storyboard in Resources */,
+				C0819D6F28E5D7E600210227 /* a-botanical-wreath-loading.json in Resources */,
+				C0819D6D28E5BB2800210227 /* GoogleService-Info.plist in Resources */,
 				C0F6A7C428D0680400DAAACB /* Assets.xcassets in Resources */,
 				C0F6A7C228D0680200DAAACB /* Main.storyboard in Resources */,
 			);
@@ -284,6 +293,7 @@
 				C0F6A7BF28D0680200DAAACB /* HomeViewController.swift in Sources */,
 				C0EDD94128D0A9E2004086FD /* UserViewController.swift in Sources */,
 				C012FD5728D710C800A755C0 /* LikeDetailViewController.swift in Sources */,
+				C0819D7328E6EEB700210227 /* TabBarController.swift in Sources */,
 				C0CFBDCD28D6EE8400B639D2 /* UserDetailViewController.swift in Sources */,
 				C0B72C2028D6E98900077682 /* UserTableViewCell.swift in Sources */,
 				C0F6A7BB28D0680200DAAACB /* AppDelegate.swift in Sources */,
@@ -427,6 +437,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -442,7 +453,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5VQ9DRSPK5;
+				DEVELOPMENT_TEAM = 6NDM2TJS37;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlowerGarden/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -471,7 +482,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5VQ9DRSPK5;
+				DEVELOPMENT_TEAM = 6NDM2TJS37;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlowerGarden/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

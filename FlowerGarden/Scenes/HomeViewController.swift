@@ -7,18 +7,21 @@
 
 import UIKit
 import Lottie
+import Firebase
 
 class HomeViewController: UIViewController {
     
     let animationView: AnimationView = {
+        let animationView = AnimationView(name: "women-day-flower-delivery")
+        animationView.frame = CGRect(x: 0, y: 0, width: 350, height: 500)
+        animationView.contentMode = .scaleAspectFill
         
-        let aniView = AnimationView(name: "women-day-flower-delivery.json")
-        aniView.frame = CGRect(x: 0, y: 0, width: 0, height: 0)
-        aniView.contentMode = .scaleAspectFill
-        
-        return aniView
+        return animationView
     }()
-
+    
+    let db: DatabaseReference! = Database.database().reference()
+    
+    @IBOutlet weak var flowerSection: UILabel!
     @IBOutlet weak var bannerCollectionView: UICollectionView!
     @IBOutlet weak var tableView: UITableView!
     
@@ -28,13 +31,28 @@ class HomeViewController: UIViewController {
     
     let dataArray: Array<UIImage> = [UIImage(named: "Banner_0")!, UIImage(named: "Banner_1")!, UIImage(named: "Banner_2")!]
     
+    
+    let addressList = ["서울특별시 동대문구 장안동", "서울특별시 성동구 행당동", "서울특별시 노원구 월계동", "서울특별시 종로구 숭인동", "서울특별시 성동구 마장동"]
+    let flowerList = ["두용이의 꽃집", "심두용의 꽃집", "두용이의 꽃다발", "두용쓰 플라워", "두용씨 반가워요"]
+    
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         lottie()
         
         setupLayout()
+        setupNavigationBar()
         bannerTimer()
+        
+        db.child("titleName").observeSingleEvent(of: .value) { snapshot in
+            let firstData = snapshot.value as? String ?? ""
+            
+            DispatchQueue.main.async {
+                self.flowerSection.text = firstData
+            }
+        }
         
     }
 
@@ -44,15 +62,34 @@ class HomeViewController: UIViewController {
 extension HomeViewController {
     
     func lottie() {
-        // 뷰가 끝나고 MainView 등장
+        
+        view.addSubview(animationView)
+        animationView.center = view.center
+
         animationView.play { (finish) in
-            print("애니메이션 끝!")
+            print("Animation finished!")
             
-            // 뷰 삭제
             self.animationView.removeFromSuperview()
-            
-            //title
         }
+        
+        
+        
+        self.animationView.removeFromSuperview()
+    }
+    
+    func setupNavigationBar() {
+        
+        let nav = self.navigationController?.navigationBar
+        
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        imageView.contentMode = .scaleAspectFit
+        
+        let image = UIImage(named: "FlowerGarden_logo") //Your logo url here
+        imageView.image = image
+        
+        navigationItem.titleView = imageView
+  
+
     }
     
     func setupLayout() {
@@ -128,12 +165,16 @@ extension HomeViewController: UITableViewDelegate {
 extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return flowerList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "StoreListTableViewCell", for: indexPath) as? StoreListTableViewCell
+        
         cell?.selectionStyle = .none
+        
+        cell?.titleLabel.text = flowerList[indexPath.row]
+        cell?.addressLabel.text = addressList[indexPath.row]
 
         return cell ?? UITableViewCell()
     }
