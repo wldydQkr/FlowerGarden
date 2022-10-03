@@ -8,6 +8,7 @@
 import UIKit
 import SnapKit
 import FirebaseAuth
+import FirebaseDatabase
 
 class HomeViewController: UIViewController {
 
@@ -24,6 +25,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        welcomeText()
         setupLayout()
         bannerTimer()
         
@@ -32,6 +34,11 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+    }
+    
+    private func welcomeText() {
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
         
         if let userInfo = Auth.auth().currentUser?.providerData[0] {
             let user = Auth.auth().currentUser
@@ -45,7 +52,15 @@ class HomeViewController: UIViewController {
                 multiFactorString += " "
               }
             }
-            userWelcome.text = "\(userInfo.displayName ?? user?.email ?? "고객") 님 환영합니다."
+            
+            ref.child("user_list/\(user?.uid ?? "userID")/name").getData(completion:  { error, snapshot in
+              guard error == nil else {
+                print(error!.localizedDescription)
+                return;
+              }
+                let userName = snapshot?.value as? String ?? "고객";
+                self.userWelcome.text = "\(userInfo.displayName ?? userName) 님 환영합니다."
+            });
         }
         else {
             userWelcome.text = "OOO 님 환영합니다."

@@ -9,7 +9,7 @@ import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 
-class SignUpOwnerViewController: UIViewController {
+class GSignUpOwnerViewController: UIViewController {
 
     @IBOutlet weak var storeNameTextField: UITextField!
     @IBOutlet weak var storeAddressTextField: UITextField!
@@ -23,6 +23,7 @@ class SignUpOwnerViewController: UIViewController {
     
     
     @IBAction func completionButtonTapped(_ sender: Any) {
+        
         // 구글 회원 정보 불러오기
         if let userInfo = Auth.auth().currentUser?.providerData[0] {
             let user = Auth.auth().currentUser
@@ -30,16 +31,16 @@ class SignUpOwnerViewController: UIViewController {
             // Real Database에 회원 저장
             var ref: DatabaseReference!
             ref = Database.database().reference()
-            ref.child("onwer_list").child(user?.uid ?? "uid").setValue(["uid": user?.uid, "name": userInfo.displayName, "email": userInfo.email, "store_name": storeNameTextField.text, "store_address": storeAddressTextField.text])
+            ref.child("owner_list").child(user?.uid ?? "uid").setValue(["uid": user?.uid, "name": userInfo.displayName, "email": userInfo.email, "store_name": storeNameTextField.text, "store_address": storeAddressTextField.text])
         }
         // 메인 화면으로 이동
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        let mainViewController = storyboard.instantiateViewController(withIdentifier: "NavigationController")
-        mainViewController.modalPresentationStyle = .fullScreen
+        let vc = storyboard.instantiateViewController(withIdentifier: "NavigationController")
+        vc.modalPresentationStyle = .fullScreen
         //UIApplication.shared.windows.first?.rootViewController?.show(mainViewController, sender: nil)
         let scenes = UIApplication.shared.connectedScenes
         let windowScene = scenes.first as? UIWindowScene
-        windowScene?.windows.first?.rootViewController?.show(mainViewController, sender: nil)
+        windowScene?.windows.first?.rootViewController?.show(vc, sender: nil)
     }
     
 }

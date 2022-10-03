@@ -52,7 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                     else {
                         // 점포 정보 입력하는 화면으로 이동
                         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-                        let mainViewController = storyboard.instantiateViewController(withIdentifier: "SignUpOwnerViewController")
+                        let mainViewController = storyboard.instantiateViewController(withIdentifier: "GSignUpOwnerViewController")
                         mainViewController.modalPresentationStyle = .fullScreen
                         //UIApplication.shared.windows.first?.rootViewController?.show(mainViewController, sender: nil)
                         let scenes = UIApplication.shared.connectedScenes
