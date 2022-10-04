@@ -42,17 +42,6 @@ class HomeViewController: UIViewController {
         
         if let userInfo = Auth.auth().currentUser?.providerData[0] {
             let user = Auth.auth().currentUser
-            if let user = user {
-              let uid = user.uid
-              let email = user.email
-              let photoURL = user.photoURL
-              var multiFactorString = "MultiFactor: "
-              for info in user.multiFactor.enrolledFactors {
-                multiFactorString += info.displayName ?? "[DispayName]"
-                multiFactorString += " "
-              }
-            }
-            
             ref.child("user_list/\(user?.uid ?? "userID")/name").getData(completion:  { error, snapshot in
               guard error == nil else {
                 print(error!.localizedDescription)

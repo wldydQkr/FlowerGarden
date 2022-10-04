@@ -37,12 +37,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                 let user = Auth.auth().currentUser
                 
                 // DB 데이터 가져오기
-                ref.child("onwer_list/\(user?.uid ?? "")/uid").getData(completion:  { error, snapshot in
+                ref.child("owner_list/\(user?.uid ?? "")/uid").getData(completion:  { error, snapshot in
                     guard error == nil else {
                         print(error!.localizedDescription)
                         return;
                     }
-                    let uid = snapshot?.value as? String ?? "uidError";
+                    let uid = snapshot?.value as? String ?? "Non-uid";
                     
                     // 로그인된 uid가 이미 DB에 있으면 메인화면으로
                     if user?.uid == uid {
@@ -62,15 +62,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                     }
                 });
             }
+            // 사용자 로그인일 경우
             else {
-                // 구글 회원 정보 불러오기
-                if let userInfo = Auth.auth().currentUser?.providerData[0] {
-                    let user = Auth.auth().currentUser
+                let user = Auth.auth().currentUser
+                // DB 데이터 가져오기
+                ref.child("user_list/\(user?.uid ?? "")/uid").getData(completion:  { error, snapshot in
+                    guard error == nil else {
+                        print(error!.localizedDescription)
+                        return;
+                    }
+                    let uid = snapshot?.value as? String ?? "Non-uid";
                     
-                    // Real Database에 회원 저장
-                    ref.child("user_list").child(user?.uid ?? "uid").setValue(["uid": user?.uid, "name": userInfo.displayName, "email": userInfo.email])
-                }
-                self.showMainViewController()    // 메인 화면으로 이동
+                    // 로그인된 uid가 이미 DB에 있으면 메인화면으로
+                    if user?.uid == uid {
+                        self.showMainViewController()    // 메인 화면으로 이동
+                    }
+                    // 로그인된 uid가 DB에 없을때 DB에 저장
+                    else {
+                        // 구글 회원 정보 불러오기
+                        if let userInfo = Auth.auth().currentUser?.providerData[0] {
+                            let user = Auth.auth().currentUser
+                            
+                            // Real Database에 회원 저장
+                            ref.child("user_list").child(user?.uid ?? "uid").setValue(["uid": user?.uid, "name": userInfo.displayName, "email": userInfo.email])
+                            self.showMainViewController()    // 메인 화면으로 이동
+                        }
+                    }
+                });
             }
         }
     }

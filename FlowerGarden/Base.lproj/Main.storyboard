@@ -720,7 +720,7 @@
         <!--Sign Up Owner View Controller-->
         <scene sceneID="CgU-DD-ZmL">
             <objects>
-                <viewController storyboardIdentifier="SignUpOwnerViewController" id="CLJ-AU-yUR" customClass="GSignUpOwnerViewController" customModule="FlowerGarden" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GSignUpOwnerViewController" id="CLJ-AU-yUR" customClass="GSignUpOwnerViewController" customModule="FlowerGarden" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vh7-fI-dpa">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -730,15 +730,40 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="점포 정보 입력" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hcu-Kb-PMY">
                                 <rect key="frame" x="110" y="109" width="170" height="36"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="JBx-ZN-vW9"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="점포명" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Vp-eI-IF5">
+                                <rect key="frame" x="54" y="225" width="65" height="35"/>
+                                <color key="backgroundColor" red="0.38794784030000001" green="0.74263799149999998" blue="0.97646187939999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="FJv-1v-ij5"/>
+                                    <constraint firstAttribute="height" constant="35" id="WzK-wk-aKc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="점포명을 입력해주세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="82X-4d-hFT">
+                                <rect key="frame" x="140" y="225" width="196" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="주소를 입력해주세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DUR-sd-kUJ">
+                                <rect key="frame" x="140" y="317" width="196" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="점포주소" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfC-bp-bwU">
+                                <rect key="frame" x="54" y="317" width="65" height="34"/>
+                                <color key="backgroundColor" red="0.1960784314" green="0.67843137249999996" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n83-hh-HVu">
-                                <rect key="frame" x="153" y="416" width="84" height="41"/>
+                                <rect key="frame" x="153" y="442" width="84" height="41"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -748,64 +773,34 @@
                                     <action selector="loginButtonTapped:" destination="IuX-5H-IvH" eventType="touchUpInside" id="eSb-JP-dwZ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="점포명" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Vp-eI-IF5">
-                                <rect key="frame" x="54" y="232" width="65" height="37"/>
-                                <color key="backgroundColor" red="0.38794784030000001" green="0.74263799149999998" blue="0.97646187939999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="65" id="uLY-ap-Yd7"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="점포명을 입력해주세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="82X-4d-hFT">
-                                <rect key="frame" x="140" y="232" width="196" height="37"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="주소를 입력해주세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DUR-sd-kUJ">
-                                <rect key="frame" x="140" y="298" width="196" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="점포주소" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfC-bp-bwU">
-                                <rect key="frame" x="54" y="298" width="65" height="34"/>
-                                <color key="backgroundColor" red="0.1960784314" green="0.67843137249999996" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="2YT-48-dud"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="npi-bs-2jl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Hcu-Kb-PMY" firstAttribute="centerX" secondItem="djQ-V3-Q4M" secondAttribute="centerX" id="1eY-K5-KoQ"/>
-                            <constraint firstItem="npi-bs-2jl" firstAttribute="trailing" secondItem="82X-4d-hFT" secondAttribute="trailing" constant="54" id="3Cn-ct-2FY"/>
-                            <constraint firstItem="dfC-bp-bwU" firstAttribute="top" secondItem="7Vp-eI-IF5" secondAttribute="bottom" constant="29" id="4RC-GY-DFZ"/>
-                            <constraint firstItem="djQ-V3-Q4M" firstAttribute="leading" secondItem="npi-bs-2jl" secondAttribute="leading" id="4si-Re-L1r"/>
-                            <constraint firstItem="7Vp-eI-IF5" firstAttribute="leading" secondItem="npi-bs-2jl" secondAttribute="leading" constant="54" id="6KN-aC-I4g"/>
-                            <constraint firstItem="djQ-V3-Q4M" firstAttribute="centerY" secondItem="vh7-fI-dpa" secondAttribute="centerY" id="AC2-7P-Cbi"/>
-                            <constraint firstItem="dfC-bp-bwU" firstAttribute="bottom" secondItem="DUR-sd-kUJ" secondAttribute="bottom" id="DEJ-pd-jPb"/>
-                            <constraint firstItem="Hcu-Kb-PMY" firstAttribute="centerX" secondItem="n83-hh-HVu" secondAttribute="centerX" id="DJo-xu-Pcr"/>
-                            <constraint firstItem="7Vp-eI-IF5" firstAttribute="top" secondItem="Hcu-Kb-PMY" secondAttribute="bottom" constant="87" id="G25-68-68s"/>
-                            <constraint firstItem="7Vp-eI-IF5" firstAttribute="leading" secondItem="dfC-bp-bwU" secondAttribute="leading" id="Gde-mP-Fx2"/>
-                            <constraint firstItem="82X-4d-hFT" firstAttribute="leading" secondItem="7Vp-eI-IF5" secondAttribute="trailing" constant="21" id="IIo-FL-IzE"/>
-                            <constraint firstItem="Hcu-Kb-PMY" firstAttribute="leading" secondItem="npi-bs-2jl" secondAttribute="leading" constant="110" id="LFy-MP-KRE"/>
-                            <constraint firstItem="n83-hh-HVu" firstAttribute="leading" secondItem="npi-bs-2jl" secondAttribute="leading" constant="153" id="OfE-lJ-YnX"/>
-                            <constraint firstItem="7Vp-eI-IF5" firstAttribute="bottom" secondItem="82X-4d-hFT" secondAttribute="bottom" id="QDO-zC-dqW"/>
-                            <constraint firstItem="npi-bs-2jl" firstAttribute="bottom" secondItem="n83-hh-HVu" secondAttribute="bottom" constant="353" id="Sdb-yc-SZv"/>
-                            <constraint firstItem="82X-4d-hFT" firstAttribute="trailing" secondItem="DUR-sd-kUJ" secondAttribute="trailing" id="Wcw-Dc-ixV"/>
-                            <constraint firstItem="npi-bs-2jl" firstAttribute="bottom" secondItem="dfC-bp-bwU" secondAttribute="bottom" constant="478" id="Xdp-qk-tVO"/>
-                            <constraint firstItem="djQ-V3-Q4M" firstAttribute="top" secondItem="vh7-fI-dpa" secondAttribute="topMargin" constant="-91" id="byb-7I-bqY"/>
-                            <constraint firstItem="7Vp-eI-IF5" firstAttribute="trailing" secondItem="dfC-bp-bwU" secondAttribute="trailing" id="c7u-pi-Zr4"/>
-                            <constraint firstItem="82X-4d-hFT" firstAttribute="leading" secondItem="DUR-sd-kUJ" secondAttribute="leading" id="gRd-lg-f5L"/>
-                            <constraint firstItem="7Vp-eI-IF5" firstAttribute="top" secondItem="82X-4d-hFT" secondAttribute="top" id="hGu-Ud-isq"/>
-                            <constraint firstItem="n83-hh-HVu" firstAttribute="top" secondItem="DUR-sd-kUJ" secondAttribute="bottom" constant="84" id="rRH-MS-Mor"/>
-                            <constraint firstItem="Hcu-Kb-PMY" firstAttribute="top" secondItem="npi-bs-2jl" secondAttribute="top" constant="62" id="rlr-30-SjY"/>
-                            <constraint firstItem="djQ-V3-Q4M" firstAttribute="centerX" secondItem="vh7-fI-dpa" secondAttribute="centerX" id="zcK-lr-uzl"/>
+                            <constraint firstItem="7Vp-eI-IF5" firstAttribute="top" secondItem="82X-4d-hFT" secondAttribute="top" id="8G4-lR-plF"/>
+                            <constraint firstItem="82X-4d-hFT" firstAttribute="leading" secondItem="DUR-sd-kUJ" secondAttribute="leading" id="8l3-IJ-a7R"/>
+                            <constraint firstItem="82X-4d-hFT" firstAttribute="trailing" secondItem="DUR-sd-kUJ" secondAttribute="trailing" id="Bd3-vT-xQB"/>
+                            <constraint firstItem="n83-hh-HVu" firstAttribute="top" relation="lessThanOrEqual" secondItem="DUR-sd-kUJ" secondAttribute="bottom" constant="91" id="Erq-Z2-nLC"/>
+                            <constraint firstItem="djQ-V3-Q4M" firstAttribute="leading" secondItem="npi-bs-2jl" secondAttribute="leading" id="HGF-oX-rvO"/>
+                            <constraint firstItem="82X-4d-hFT" firstAttribute="leading" secondItem="7Vp-eI-IF5" secondAttribute="trailing" constant="21" id="HpF-OP-2rR"/>
+                            <constraint firstItem="7Vp-eI-IF5" firstAttribute="leading" secondItem="dfC-bp-bwU" secondAttribute="leading" id="IwO-0z-p2P"/>
+                            <constraint firstItem="Hcu-Kb-PMY" firstAttribute="top" secondItem="npi-bs-2jl" secondAttribute="top" constant="62" id="PcL-cg-uel"/>
+                            <constraint firstItem="dfC-bp-bwU" firstAttribute="bottom" secondItem="DUR-sd-kUJ" secondAttribute="bottom" id="QpI-2R-WRL"/>
+                            <constraint firstItem="dfC-bp-bwU" firstAttribute="top" secondItem="DUR-sd-kUJ" secondAttribute="top" id="Szl-3n-nKC"/>
+                            <constraint firstItem="7Vp-eI-IF5" firstAttribute="top" relation="lessThanOrEqual" secondItem="Hcu-Kb-PMY" secondAttribute="bottom" constant="80" id="TcA-XR-PQd"/>
+                            <constraint firstItem="7Vp-eI-IF5" firstAttribute="bottom" secondItem="82X-4d-hFT" secondAttribute="bottom" id="TeE-mp-hr9"/>
+                            <constraint firstItem="npi-bs-2jl" firstAttribute="trailing" secondItem="82X-4d-hFT" secondAttribute="trailing" constant="54" id="V5F-F4-1Rp"/>
+                            <constraint firstItem="dfC-bp-bwU" firstAttribute="top" relation="lessThanOrEqual" secondItem="7Vp-eI-IF5" secondAttribute="bottom" constant="57" id="XKv-jk-Qp5"/>
+                            <constraint firstItem="djQ-V3-Q4M" firstAttribute="centerY" secondItem="vh7-fI-dpa" secondAttribute="centerY" id="aep-ui-fPK"/>
+                            <constraint firstItem="Hcu-Kb-PMY" firstAttribute="centerX" secondItem="vh7-fI-dpa" secondAttribute="centerX" id="bft-ce-vx5"/>
+                            <constraint firstItem="djQ-V3-Q4M" firstAttribute="top" secondItem="vh7-fI-dpa" secondAttribute="topMargin" constant="-91" id="dcc-TA-emT"/>
+                            <constraint firstItem="7Vp-eI-IF5" firstAttribute="trailing" secondItem="dfC-bp-bwU" secondAttribute="trailing" id="hpi-ix-9N4"/>
+                            <constraint firstItem="n83-hh-HVu" firstAttribute="leading" secondItem="npi-bs-2jl" secondAttribute="leading" constant="153" id="jVv-YN-06j"/>
+                            <constraint firstItem="npi-bs-2jl" firstAttribute="bottom" secondItem="n83-hh-HVu" secondAttribute="bottom" constant="327" id="o0Y-qx-jIa"/>
+                            <constraint firstItem="Hcu-Kb-PMY" firstAttribute="leading" secondItem="npi-bs-2jl" secondAttribute="leading" constant="110" id="oDk-Tq-ykH"/>
+                            <constraint firstItem="djQ-V3-Q4M" firstAttribute="centerX" secondItem="n83-hh-HVu" secondAttribute="centerX" id="ozR-GB-6Ru"/>
+                            <constraint firstItem="Hcu-Kb-PMY" firstAttribute="centerX" secondItem="n83-hh-HVu" secondAttribute="centerX" id="uyL-Pq-p2G"/>
+                            <constraint firstItem="7Vp-eI-IF5" firstAttribute="leading" secondItem="npi-bs-2jl" secondAttribute="leading" constant="54" id="zuf-tD-tFB"/>
                         </constraints>
                     </view>
                     <connections>

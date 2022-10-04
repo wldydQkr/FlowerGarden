@@ -476,7 +476,7 @@
 				CODE_SIGN_ENTITLEMENTS = FlowerGarden/FlowerGarden.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6NDM2TJS37;
+				DEVELOPMENT_TEAM = 6YV87RPH2N;
 				EXCLUDED_ARCHS = "";
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -508,7 +508,7 @@
 				CODE_SIGN_ENTITLEMENTS = FlowerGarden/FlowerGarden.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6NDM2TJS37;
+				DEVELOPMENT_TEAM = 6YV87RPH2N;
 				EXCLUDED_ARCHS = "";
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
