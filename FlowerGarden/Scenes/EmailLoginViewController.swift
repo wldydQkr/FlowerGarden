@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 
 class EmailLoginViewController: UIViewController {
 
@@ -73,7 +74,44 @@ class EmailLoginViewController: UIViewController {
             if let error = error {
                 self.errorMessageLabel.text = error.localizedDescription
             } else {
-                self.showMainViewController()
+                // 점주 로그인 - 로그인된 아이디가 점주일 경우
+                if LoginViewController.onwer {
+                    let user = Auth.auth().currentUser
+                    var ref: DatabaseReference!
+                    ref = Database.database().reference()
+                    ref.child("owner_list/\(user?.uid ?? "userID")/uid").getData(completion:  { error, snapshot in
+                        guard error == nil else {
+                            print(error!.localizedDescription)
+                            return;
+                        }
+                        let uid = snapshot?.value as? String ?? "uid Error";
+                        if user?.uid == uid {
+                            self.showMainViewController()
+                        }
+                        else {
+                            self.errorMessageLabel.text = "점주 회원이 아닙니다."
+                        }
+                    });
+                } else {
+                    // 회원 로그인 - 로그인된 아이디가 회원일 경우
+                    let user = Auth.auth().currentUser
+                    var ref: DatabaseReference!
+                    ref = Database.database().reference()
+                    ref.child("user_list/\(user?.uid ?? "userID")/uid").getData(completion:  { error, snapshot in
+                        guard error == nil else {
+                            print(error!.localizedDescription)
+                            return;
+                        }
+                        let uid = snapshot?.value as? String ?? "uid Error";
+                        if user?.uid == uid {
+                            self.showMainViewController()
+                        }
+                        else {
+                            self.errorMessageLabel.text = "사용자 회원이 아닙니다."
+                        }
+                    });
+                }
+                //self.showMainViewController()
             }
         }
     }
