@@ -15,7 +15,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        // test
         let mapView = NMFMapView(frame: view.frame)
         let naverMapView = NMFNaverMapView()
         view.addSubview(mapView)
@@ -41,32 +41,31 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
 
             let marker = NMFMarker()
             marker.position = NMGLatLng(lat: locationManager.location?.coordinate.latitude ?? 0, lng: locationManager.location?.coordinate.longitude ?? 0)
-
             marker.mapView = mapView
         } else {
             print("위치 서비스 Off 상태")
         }
 
         // ------------------------------마커 여러개 찍기 -----------------------------------------
-        DispatchQueue.global(qos: .default).async { [self] in
-            // 백그라운드 스레드
-            var markers = [NMFMarker]()
-            for index in 1...10 {
-                var i = Double(index) * 0.01
-                let marker = NMFMarker(position: NMGLatLng(lat: (self.locationManager.location?.coordinate.latitude)! + i ?? 0 , lng: locationManager.location?.coordinate.longitude ?? 0))
-//                marker.iconImage = ...
-//                marker.captionText = ...
-                markers.append(marker)
-            }
-
-            DispatchQueue.main.async {
-                // 메인 스레드
-                for marker in markers {
-                    marker.mapView = mapView
-                }
-                
-            }
-        }
+//        DispatchQueue.global(qos: .default).async { [self] in
+//            // 백그라운드 스레드
+//            var markers = [NMFMarker]()
+//            for index in 1...10 {
+//                var i = Double(index) * 0.01
+//                let marker = NMFMarker(position: NMGLatLng(lat: (self.locationManager.location?.coordinate.latitude)! + i ?? 0 , lng: locationManager.location?.coordinate.longitude ?? 0))
+////                marker.iconImage = ...
+////                marker.captionText = ...
+//                markers.append(marker)
+//            }
+//
+//            DispatchQueue.main.async {
+//                // 메인 스레드
+//                for marker in markers {
+//                    marker.mapView = mapView
+//                }
+//
+//            }
+//        }
         // ------------------------------마커 여러개 찍기 -----------------------------------------
 
         
