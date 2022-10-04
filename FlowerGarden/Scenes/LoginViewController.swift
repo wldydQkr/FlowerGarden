@@ -29,7 +29,6 @@ class LoginViewController: UIViewController {
 
     @IBAction func emailLoginButtonTapped(_ sender: Any) {
         let emailLoginViewController = storyboard?.instantiateViewController(identifier: "EmailLogin")
-        //navigation
     }
     
     @IBAction func googleLoginButtonTapped(_ sender: UIButton) {
