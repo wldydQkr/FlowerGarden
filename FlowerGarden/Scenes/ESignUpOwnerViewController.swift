@@ -107,7 +107,7 @@ extension ESignUpOwnerViewController: ZipcodeDelegate {
         storeX = data.addresses[0].x
         storeY = data.addresses[0].y
         DispatchQueue.main.async {
-            self.storeNameTextField.text = self.zipcode
+            self.storeAddressTextField.text = self.zipcode
         }
     }
     

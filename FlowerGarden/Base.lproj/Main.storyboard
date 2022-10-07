@@ -1217,7 +1217,7 @@
                         <outlet property="nameTextField" destination="Qbq-0a-2Mq" id="qIJ-8J-GRD"/>
                         <outlet property="passwordTextField" destination="IWJ-C7-CVr" id="5VQ-P1-Fuo"/>
                         <outlet property="storeAddressTextField" destination="WvP-5B-b0x" id="cmz-7b-MMM"/>
-                        <outlet property="storeNameTextField" destination="WvP-5B-b0x" id="4C5-Fm-DDN"/>
+                        <outlet property="storeNameTextField" destination="U3g-42-Tcu" id="bTE-9I-chi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bqY-yg-F9g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
