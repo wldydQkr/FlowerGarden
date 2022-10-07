@@ -14,11 +14,13 @@ class KakaoZipCodeVC: UIViewController {
     var webView: WKWebView?
     let indicator = UIActivityIndicatorView(style: .medium)
     var address = ""
-
+    var delegate: ZipcodeDelegate?
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        
     }
 
     // MARK: - UI
@@ -73,17 +75,13 @@ extension KakaoZipCodeVC: WKScriptMessageHandler {
             address = data["roadAddress"] as? String ?? ""
 //            print(address)
         }
-        guard let previousVC = presentingViewController else { return }
-//        guard let presentedVC = presentedViewController as? MapViewController else { return }
-        getData(qValue: address){ address in
-            DispatchQueue.main.async {
-//                previousVC.x?.text = address.addresses[0].x
-//                previousVC.y?.text = address.addresses[0].y
-            }
-
+        getData(qValue: address){ responseData in
+            
+            self.delegate?.sendZipcode(data:responseData)
+            
         }
-//        previousVC.label.text = address
         // MARK: dissmiss
+        
         self.dismiss(animated: true, completion: nil)
     }
 }

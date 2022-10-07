@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nNP-yp-hYh">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -494,7 +494,7 @@
         <!--Kakao Zip CodeVC-->
         <scene sceneID="7gl-Mi-zoL">
             <objects>
-                <viewController storyboardIdentifier="KakaoZipCodeVC" id="7mq-Xh-XJh" customClass="KakaoZipCodeVC" customModule="FlowerGarden" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Kakaozipcode" id="7mq-Xh-XJh" customClass="KakaoZipCodeVC" customModule="FlowerGarden" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NJg-8h-TaD">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

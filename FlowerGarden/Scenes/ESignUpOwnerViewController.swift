@@ -9,7 +9,13 @@ import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 
-class ESignUpOwnerViewController: UIViewController {
+// MARK: - ZipcodeDelegate
+protocol ZipcodeDelegate{
+    func sendZipcode(data: Addresses)
+}
+
+// MARK: - ESignUpOwnerViewController
+class ESignUpOwnerViewController: UIViewController{
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -18,9 +24,17 @@ class ESignUpOwnerViewController: UIViewController {
     @IBOutlet weak var storeAddressTextField: UITextField!
     @IBOutlet weak var errorMessageLabel: UILabel!
     @IBOutlet weak var completionButton: UIButton!
+    var zipcode: String?
+    var storeX: String?
+    var storeY: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer()
+        tapGesture.delegate = self
+        self.view.addGestureRecognizer(tapGesture)
+        
         completionButton.layer.cornerRadius = 5
     }
     
@@ -44,7 +58,14 @@ class ESignUpOwnerViewController: UIViewController {
                // Real Database에 회원 저장
                var ref: DatabaseReference!
                ref = Database.database().reference()
-               ref.child("owner_list").child(user?.uid ?? "uid").setValue(["uid": user?.uid, "name": self.nameTextField.text, "email": self.emailTextField.text, "store_name": self.storeNameTextField.text, "store_address": self.storeAddressTextField.text])
+               ref.child("owner_list").child(user?.uid ?? "uid")
+                   .setValue(["uid": user?.uid,
+                              "name": self.nameTextField.text,
+                              "email": self.emailTextField.text,
+                              "store_name": self.storeNameTextField.text,
+                              "store_address": self.storeAddressTextField.text,
+                              "x": self.storeX,
+                              "y": self.storeY])
                self.showLoginViewController()
            }
        }
@@ -56,4 +77,38 @@ class ESignUpOwnerViewController: UIViewController {
         vc.modalPresentationStyle = .fullScreen
         navigationController?.show(vc, sender: nil)
     }
+}
+
+
+
+extension ESignUpOwnerViewController: UIGestureRecognizerDelegate {
+    
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+        self.view.endEditing(true)
+        return true
+    }
+    
+    @IBAction func tapZipcode(){
+        guard let kakaoVC = self.storyboard?.instantiateViewController(withIdentifier: "Kakaozipcode") as? KakaoZipCodeVC else {return}
+        kakaoVC.delegate = self
+        
+        self.present(kakaoVC, animated: true, completion: nil)
+    }
+}
+
+extension ESignUpOwnerViewController: ZipcodeDelegate {
+    
+    func sendZipcode(data: Addresses) {
+        print("zipcode!")
+        print(data.addresses[0].x)
+        print(data.addresses[0].y)
+        print(data.addresses[0].roadAddress)
+        zipcode = data.addresses[0].roadAddress
+        storeX = data.addresses[0].x
+        storeY = data.addresses[0].y
+        DispatchQueue.main.async {
+            self.storeNameTextField.text = self.zipcode
+        }
+    }
+    
 }
