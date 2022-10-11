@@ -7,6 +7,7 @@ target 'FlowerGarden' do
 
   # Pods for FlowerGarden
   pod 'GoogleSignIn', '5.0.2'
+  pod 'NMapsMap'
 
   post_install do |installer|
     installer.pods_project.build_configurations.each do |config|

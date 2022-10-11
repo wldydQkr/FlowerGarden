@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import NMapsMap
 import FirebaseCore
 import GoogleSignIn
 import FirebaseAuth
@@ -106,6 +107,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // 네이버 지도 헤더
+        NMFAuthManager.shared().clientId = "oawdp0aaj8"
         
         // Firebase 초기화
         FirebaseApp.configure()

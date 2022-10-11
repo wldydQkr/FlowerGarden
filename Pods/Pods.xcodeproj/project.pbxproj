@@ -209,7 +209,7 @@
 		200E4E7B00F86B6F561955327152FF02 /* GTMSessionUploadFetcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMSessionUploadFetcher.m; path = Source/GTMSessionUploadFetcher.m; sourceTree = "<group>"; };
 		25D0EFA705442876B3818AD8720E0531 /* OIDTokenRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDTokenRequest.m; path = Source/AppAuthCore/OIDTokenRequest.m; sourceTree = "<group>"; };
 		28C76638995D03065309EB2E8A7C35FD /* GTMSessionUploadFetcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMSessionUploadFetcher.h; path = Source/GTMSessionUploadFetcher.h; sourceTree = "<group>"; };
-		2AF5127EB5D99D27F202343C46457380 /* Pods-FlowerGarden */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-FlowerGarden"; path = Pods_FlowerGarden.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AF5127EB5D99D27F202343C46457380 /* Pods_FlowerGarden.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlowerGarden.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30C0A1840F19F082C71F6B7E25E780CF /* OIDExternalUserAgentIOS.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDExternalUserAgentIOS.m; path = Source/AppAuth/iOS/OIDExternalUserAgentIOS.m; sourceTree = "<group>"; };
 		31DA907013CC8155BA2A38DDFBC170C6 /* Pods-FlowerGarden-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FlowerGarden-resources.sh"; sourceTree = "<group>"; };
 		370E0835AADF9F6CCB20C0E9B626513B /* OIDAuthorizationResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDAuthorizationResponse.h; path = Source/AppAuthCore/OIDAuthorizationResponse.h; sourceTree = "<group>"; };
@@ -369,7 +369,7 @@
 				3FD1B4C1246D643E9476438C28048FA8 /* AppAuth.framework */,
 				6FD122EA0AB9AB2A8FFA5F676C795DF0 /* GTMAppAuth.framework */,
 				C1998E0D8085221AD87F89B614C10E52 /* GTMSessionFetcher.framework */,
-				2AF5127EB5D99D27F202343C46457380 /* Pods-FlowerGarden */,
+				2AF5127EB5D99D27F202343C46457380 /* Pods_FlowerGarden.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -784,7 +784,7 @@
 			);
 			name = "Pods-FlowerGarden";
 			productName = Pods_FlowerGarden;
-			productReference = 2AF5127EB5D99D27F202343C46457380 /* Pods-FlowerGarden */;
+			productReference = 2AF5127EB5D99D27F202343C46457380 /* Pods_FlowerGarden.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		D676E21115185671D7258A56944ABE98 /* GTMSessionFetcher */ = {
