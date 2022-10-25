@@ -42,7 +42,10 @@ class ESignUpUserViewController: UIViewController {
                 // Real Database에 회원 저장
                 var ref: DatabaseReference!
                 ref = Database.database().reference()
-                ref.child("user_list").child(user?.uid ?? "uid").setValue(["uid": user?.uid, "name": self.nameTextField.text, "email": self.emailTextField.text])
+                ref.child("user_list").child(user?.uid ?? "uid")
+                    .setValue(["uid": user?.uid,
+                               "name": self.nameTextField.text,
+                               "email": self.emailTextField.text])
                 self.showLoginViewController()
             }
         }

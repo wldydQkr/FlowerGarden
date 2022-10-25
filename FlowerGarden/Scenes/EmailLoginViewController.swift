@@ -79,6 +79,7 @@ class EmailLoginViewController: UIViewController {
                     let user = Auth.auth().currentUser
                     var ref: DatabaseReference!
                     ref = Database.database().reference()
+                    // 로그인 테스트 10.14 김두원
                     ref.child("owner_list/\(user?.uid ?? "userID")/uid").getData(completion:  { error, snapshot in
                         guard error == nil else {
                             print(error!.localizedDescription)
