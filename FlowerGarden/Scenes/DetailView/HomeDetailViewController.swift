@@ -7,9 +7,11 @@
 
 import UIKit
 
-final class HomeDetailViewController: UIViewController {
+class HomeDetailViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
+    var savedOwner: Owners?
+    var test: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +27,7 @@ final class HomeDetailViewController: UIViewController {
     
     func setupNavigationBar() {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "heart.fill"), style: .plain, target: self, action: #selector(likeButtonAction))
+        self.navigationItem.title = savedOwner?.store_name
     }
     
     @objc func likeButtonAction() {
@@ -46,6 +49,8 @@ extension HomeDetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeDetailTableViewCell", for: indexPath) as? HomeDetailTableViewCell
         cell?.selectionStyle = .none
+        
+        cell?.nameLabel.text = savedOwner?.name
         
         return cell ?? UITableViewCell()
     }

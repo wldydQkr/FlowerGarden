@@ -13,16 +13,26 @@ import Firebase
 class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var subView: UIView!
+    @IBOutlet weak var ownerStoreName: UILabel!
+    @IBOutlet weak var ownerAddress: UILabel!
+    @IBOutlet weak var ownerStoreNumber: UILabel!
     var locationManager = CLLocationManager()
     let redView = UIView()
     var marker = NMFMarker()
     var markers: [NMFMarker] = []
     var ownerList: [Owners] = []
+    var ownerSave = Owners()
     let jsonDecoder: JSONDecoder = JSONDecoder()
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // MARK: UITapGestureRecognizer - ownerLabel tap
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTapView(_:)))
+        ownerStoreName.addGestureRecognizer(tapGestureRecognizer)
+        ownerStoreName.isUserInteractionEnabled = true
         
         let mapView = NMFMapView(frame: view.frame)
         mapView.touchDelegate = self
@@ -57,19 +67,22 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
                             marker = NMFMarker(position: marker.position)
                             
                             marker.touchHandler = { (overlay: NMFOverlay) -> Bool in
-                                print(owner[index].name , owner[index].x, owner[index].y)
+                                
+                                self.ownerStoreName.text = owner[index].store_name
+                                self.ownerAddress.text = owner[index].store_address
+                                self.ownerStoreNumber.text = owner[index].store_number
+                                
+                                self.ownerSave = owner[index]
                                 
                                 self.subView?.isHidden = false
                                 self.view.bringSubviewToFront(self.subView!)
-                          
+                                
                                 return true
                             }
                                 
-                            marker.iconImage = NMFOverlayImage(name: "garden")
+                            marker.iconImage = NMFOverlayImage(name: "marker_image_default")
                             marker.width = 50
                             marker.height = 50
-                            
-                            print(self.marker)
                             
                             return marker
                         }()
@@ -104,13 +117,10 @@ extension MapViewController: NMFMapViewTouchDelegate {
         
         self.marker.width = 50
         self.marker.height = 50
-        self.marker.iconImage = NMFOverlayImage(name: "garden")
+        self.marker.iconImage = NMFOverlayImage(name: "marker_image_default")
         self.subView?.isHidden = true
         
         print("지도 탭")
-        
-        print("3:", ownerList.count)
-        
     }
 }
 
@@ -135,34 +145,32 @@ extension MapViewController {
         
     }
     
-//    func editMarker(_ latitude:Double,_ longitude:Double,_ title:String, index: Int){
-//        self.marker.position = NMGLatLng(lat: latitude, lng: longitude)
-//
-//        self.marker = NMFMarker(position: self.marker.position)
-//
-//        self.marker.touchHandler = { (overlay: NMFOverlay) -> Bool in
-//            print(title , longitude, latitude)
-//            return true
-//        }
-//
-//        self.marker.iconImage = NMFOverlayImage(name: "garden")
-//        self.marker.width = 50
-//        self.marker.height = 50
-//
-//        print(self.marker)
-//        markers.append(self.marker)
-//    }
-//
+    // MARK: UITapGestureRecognizer - ownerLabel tap
+    @objc func didTapView(_ sender: UITapGestureRecognizer) {
+        
+        print("ownerSave:", ownerSave)
+        
+        guard let detailVC = self.storyboard?.instantiateViewController(withIdentifier: "HomeDetailViewController") as? HomeDetailViewController else {return}
+        
+        performSegue(withIdentifier: "detailViewIdentifier", sender: nil)
+        
+//        self.present(detailVC, animated: true, completion: nil)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "detailViewIdentifier" {
+            
+            guard let destination = segue.destination as? HomeDetailViewController else {
+                return
+            }
+            
+            destination.savedOwner = ownerSave
+            
+        } else {
+            print("error!!")
+        }
+    }
+    
 }
-
-
-//// MARK: 마커 선택
-//marker.touchHandler = { (overlay: NMFOverlay) -> Bool in
-//    print("마커 터치")
-//    self.marker.width = 70
-//    self.marker.height = 70
-//    self.marker.iconImage = NMFOverlayImage(name: "marker_image_default")
-//    self.subView?.isHidden = false
-//    self.view.bringSubviewToFront(self.subView!)
-//    return true
-//}

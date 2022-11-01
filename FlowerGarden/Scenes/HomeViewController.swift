@@ -15,8 +15,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var bannerCollectionView: UICollectionView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var userWelcome: UILabel!
-    
     @IBOutlet var scrollView: UIScrollView!
+    var ownerList: [Owners] = []
     
     var nowPage: Int = 0
     
@@ -28,7 +28,10 @@ class HomeViewController: UIViewController {
         welcomeText()
         setupLayout()
         bannerTimer()
-        
+        MapViewController().dbLoad { owners in
+            self.ownerList = owners
+            self.tableView.reloadData()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -132,12 +135,15 @@ extension HomeViewController: UITableViewDelegate {
 extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return ownerList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "StoreListTableViewCell", for: indexPath) as? StoreListTableViewCell
-
+        
+        cell?.titleLabel.text = ownerList[indexPath.row].store_name
+        cell?.addressLabel.text = ownerList[indexPath.row].store_address
+        
         return cell ?? UITableViewCell()
     }
 }

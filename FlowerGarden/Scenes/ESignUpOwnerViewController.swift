@@ -22,6 +22,7 @@ class ESignUpOwnerViewController: UIViewController{
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var storeNameTextField: UITextField!
     @IBOutlet weak var storeAddressTextField: UITextField!
+    @IBOutlet weak var storeNumberTextField: UITextField!
     @IBOutlet weak var errorMessageLabel: UILabel!
     @IBOutlet weak var completionButton: UIButton!
     var zipcode: String?
@@ -64,6 +65,7 @@ class ESignUpOwnerViewController: UIViewController{
                               "email": self.emailTextField.text,
                               "store_name": self.storeNameTextField.text,
                               "store_address": self.storeAddressTextField.text,
+                              "store_number" : self.storeNumberTextField.text,
                               "x": self.storeX,
                               "y": self.storeY])
                self.showLoginViewController()

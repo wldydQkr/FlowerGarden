@@ -160,8 +160,8 @@
 				BE6DF2F728F00D8300FDF4F5 /* KaKaoZipCodeVC.swift */,
 				C0EDD94228D0A9EF004086FD /* Scenes */,
 				C0F6A7C028D0680200DAAACB /* Main.storyboard */,
-				BE6DF2F128F00B9600FDF4F5 /* GoogleService-Info.plist */,
 				C0F6A7C528D0680400DAAACB /* LaunchScreen.storyboard */,
+				BE6DF2F128F00B9600FDF4F5 /* GoogleService-Info.plist */,
 				C0F6A7C828D0680400DAAACB /* Info.plist */,
 				12E227C828D787E2009103B4 /* Assets.xcassets */,
 			);
